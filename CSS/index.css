@@ -1,0 +1,26 @@
+body {
+	background-image: url("C:/Users/student/Desktop/FrontEndFinalProject/Asserts/background.jpg");
+	background-color: black;
+	background-size: cover;
+}
+
+.logo_styele{
+	width: 70;
+	height: 70;
+	border-radius: 10%;
+	margin: 0.5%;
+}
+
+.header_buttons{
+	padding: 0;
+}
+
+.log_in{
+	float: right;	
+	margin: 0.5%;
+}
+
+.sing_up{
+	float: right;
+	margin: 0.5%;
+}
