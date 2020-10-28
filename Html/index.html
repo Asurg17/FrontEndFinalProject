@@ -1,20 +1,77 @@
 <html>
     <head>
-        <title>RC</title>
+        <title>RCSS | Rent car smart&safely</title>
         <link rel="shortcut icon" href="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\icon.jpg" />
         <link rel="stylesheet" type="text/css" href="C:\Users\student\Desktop\FrontEndFinalProject\CSS\index.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     </head>
     <body>
 
-        <header>
-            <div>
-                <img src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\logo.png" class="logo_styele">
-                <div class="header_buttons">
-                    <button class="log_in">Log in</button>
-                    <button class="sing_up">Sign up</button>
-                </div>            
-            <div>
+        <header class="h_class">
+            
+            <div class="logo">
+                <a href="#">
+                    <img src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\logo.png" class="logo_style">
+                </a>
+            </div>
+
+            <div class="nav">
+                <div class="icon">
+                    <i class='far fa-user-circle' style="line-height: 50px;"></i>
+                </div>
+                <a href="#" class="nav_style">Sign up</a>
+                <a href="#" class="nav_style">Log in</a>
+            </div>
+
         </header>
+
+
+        <div>
+            <div>
+                <form class="container">
+                    
+                    <!--  -->
+                    <div class="location">
+                        
+                        <div>
+                            <label>Where</label> 
+                        </div>
+
+                        <div>
+                            <input type="text" name="location" placeholder="Location">       
+                        </div>
+
+                    </div>
+
+                    <!--  -->
+                    <div class="from">
+
+                        <div>
+                            <label>From</label> 
+                        </div>
+                        
+                        <div>
+                            <input type="datetime-local" name="from" value="">
+                        </div>
+
+                    </div>
+
+                    <!--  -->
+                    <div class="until">
+
+                        <div>
+                            <label>Until</label> 
+                        </div>
+                        
+                        <div>
+                            <input type="datetime-local" name="to" value="">
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
 
 
     </body>

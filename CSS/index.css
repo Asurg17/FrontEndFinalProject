@@ -1,26 +1,82 @@
 body {
-	background-image: url("C:/Users/student/Desktop/FrontEndFinalProject/Asserts/background.jpg");
-	background-color: black;
 	background-size: cover;
 }
 
-.logo_styele{
-	width: 70;
-	height: 70;
+.h_class{
+    background-color: #FFFFFF;
+    height: 50px;
+    padding: 0 60px;
+}
+
+.logo{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.logo_style{
+	width: 150px;
+	height: 100%;
 	border-radius: 10%;
-	margin: 0.5%;
+	margin-left: auto;
+    margin-right: auto 
 }
 
-.header_buttons{
-	padding: 0;
-}
-
-.log_in{
-	float: right;	
-	margin: 0.5%;
-}
-
-.sing_up{
+.nav{
+	width: 50%;
+	height: 100%;
 	float: right;
-	margin: 0.5%;
+}
+
+.nav_style{
+	float: right;
+	padding: 0 10px;
+	color: #231F20;
+    font-size: 12.5px;
+    font-weight: bold;
+    line-height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.icon{
+	float: right;
+	padding: 0 10px;
+}
+
+.container{
+	background-color: #FFFFFF;
+    height: 70px;
+    padding: 0 400px;*/
+    line-height: 50px;
+}
+
+.location{
+	width: 33.3%;
+	height: 100%;
+	margin: 0 0;
+	border: 0;
+	padding: 0;
+	float:left;
+	/*width: 100px;*/
+}
+
+.from{
+	width: 33.3%;
+	height: 100%;
+	margin: 0 0;
+	border: 0;
+	padding: 0;
+	float:left;
+	/*width: 100px;*/
+}
+
+.until{
+	width: 33.3%;
+	height: 100%;
+	margin: 0 0;
+	border: 0;
+	padding: 0;
+	float:left;
+	/*width: 100px;*/
 }
