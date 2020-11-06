@@ -156,14 +156,48 @@ h2.slogan{
 }
 
 .categories_style{
-	height: 200px; 
+	height: 50px; 
 	padding: 10px 70px 10px 70px;
 }
 
 .cl1{
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 50px;
 }
 
+/*Here goes css for car browse*/
+.brows_cars{
+	padding: 30px 70px 30px 70px;
+	display: flex;
+}
 
+.browse_cars_style{
+ 	height: 150px;
+ 	width: 200px;
+ 	padding-left: 10px;
+ 	padding-right: 10px;
+ }
+
+.browse_cars_img{
+	width: 200px; 
+	height: 150px;
+	border-radius: 10px;
+}
+
+.browse_cars_label{
+	font-size: 15px;
+	color: #231F20;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-top: 10px;
+	text-align: center;
+}
+
+/*White Space*/
+.white_space{
+	width: 100%;
+	height: 100px;
+	background-color: white;
+}
