@@ -128,15 +128,6 @@ h2.slogan{
 	/*background-color: black;*/
 }
 
-.footer_style{
-	height: 50px;
-	line-height: 50px;
-	padding: 30px 60px;
-	font-size: 14px;
-	background-color: #F4F4F4;
-	text-align: center;
-}
-
 .m_image_div_style{
 	height: 400px;
 	width: 100%;
@@ -200,4 +191,92 @@ h2.slogan{
 	width: 100%;
 	height: 100px;
 	background-color: white;
+}
+
+/*Top*/
+.top{
+	height: 200px;
+	width: 100%;
+	background-color: grey;
+}
+
+.top_label_div{
+	padding-left: 30px;
+}
+
+.top_label{
+	font-size: 20px;
+	font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 50px;
+}
+
+
+
+
+
+
+
+
+/*Footer classes*/
+
+.footer_style{
+	background-color: #F4F4F4;
+}
+
+.footer_div_style{
+	justify-content: center;
+	padding-left: 300px;
+	padding-right: 300px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	/*display: flex;*/
+}
+
+/*basic & statistic*/
+
+.basic_statistic_info{
+	display: flex;
+}
+
+.basic_statistic_info_sub{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	float: left;
+}
+
+.social_network{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	float: right;
+}
+
+/*****/
+.ls_footer{
+	display: flex;
+	padding-left: 20px;
+}
+
+.ls_footer_sub{
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	float: left;
+	align-self: center;
+}
+
+.ls_f_text{
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.f_text{
+	text-decoration: none;
 }
