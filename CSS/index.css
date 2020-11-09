@@ -131,7 +131,11 @@ h2.slogan{
 .m_image_div_style{
 	height: 400px;
 	width: 100%;
-	background-image: url('C:/Users/student/Desktop/FrontEndFinalProject/Asserts/test_var.jpg')
+	background-size: cover;
+	background-image: url('C:/Users/student/Desktop/FrontEndFinalProject/Asserts/test_var.jpg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
 }
 
 .dots_style{
@@ -159,9 +163,11 @@ h2.slogan{
 }
 
 /*Here goes css for car browse*/
-.brows_cars{
+.browse_cars{
 	padding: 30px 70px 30px 70px;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .browse_cars_style{
@@ -197,7 +203,7 @@ h2.slogan{
 .top{
 	height: 200px;
 	width: 100%;
-	background-color: grey;
+	background-color: #3A302E;
 }
 
 .top_label_div{
@@ -212,31 +218,69 @@ h2.slogan{
 }
 
 
+/*Benefits*/
+.benefits{
+	justify-content: center;
+	padding-left: 300px;
+	padding-right: 300px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: EEEEE9;
+}
 
+.benbenefits_sub{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
+.benefits_sub_div{
+	width: 300px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
 
+/*Search Button*/
 
+.button{
+	background-color: #f4511e;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	font-size: 15px;
+	font-family: 'Roboto'; 
+	margin: 4px 2px;
+	border-radius: 3px;
+	opacity: 0.6;
+	transition: 0.3s;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.button:hover {opacity: 1}
 
 
 /*Footer classes*/
 
 .footer_style{
 	background-color: #F4F4F4;
-}
-
-.footer_div_style{
 	justify-content: center;
 	padding-left: 300px;
 	padding-right: 300px;
 	padding-top: 100px;
 	padding-bottom: 100px;
-	/*display: flex;*/
 }
 
 /*basic & statistic*/
 
 .basic_statistic_info{
 	display: flex;
+	justify-content: center;
 }
 
 .basic_statistic_info_sub{
@@ -258,7 +302,7 @@ h2.slogan{
 /*****/
 .ls_footer{
 	display: flex;
-	padding-left: 20px;
+	justify-content: center;
 }
 
 .ls_footer_sub{
