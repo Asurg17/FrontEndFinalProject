@@ -163,8 +163,49 @@ h2.slogan{
 }
 
 /*Here goes css for car browse*/
+
+/*Arrows start*/
+
+.arrow {
+    border: solid grey;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+}
+
+.arrow:hover{
+	border: solid #3A302E;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.arrow_sub{
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.arrow:active{
+	border: solid #3A302E;
+	border-width: 0 3px 3px 0;
+    padding: 5px;
+}
+  
+
+/*Arrows end*/
+
 .browse_cars{
-	padding: 30px 70px 30px 70px;
+	padding: 30px 30px 30px 30px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -276,6 +317,11 @@ h2.slogan{
 	padding-bottom: 100px;
 }
 
+.footer_ul{
+	list-style-type:none;
+	padding-left: 5px;
+}
+
 /*basic & statistic*/
 
 .basic_statistic_info{
@@ -284,8 +330,8 @@ h2.slogan{
 }
 
 .basic_statistic_info_sub{
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	float: left;
@@ -323,4 +369,5 @@ h2.slogan{
 
 .f_text{
 	text-decoration: none;
+	text-align: center;
 }
