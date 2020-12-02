@@ -22,11 +22,91 @@
                 <div class="icon">
                     <i class='far fa-user-circle' style="line-height: 50px;"></i>
                 </div>
-                <a href="#" class="nav_style">Sign up</a>
-                <a href="#" class="nav_style">Log in</a>
+                <p class="nav_style" onclick="openSignUpForm()">Sign up</p>
+                <p class="nav_style" onclick="openLogInForm()">Log in</p>
             </div>
 
         </header>
+
+        <!-- Popups (log in & sign in) -->
+
+        <div class="popup_overlay"></div>
+
+        <div class="login_popup">
+            <div class="popup_close" onclick="closeLogInForm()">&times;</div>
+            <div class="form">
+                
+                <div class="form_image">
+                    <img src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\logo.png">
+                </div>
+
+                <div class="login_label">Log in</div>
+
+                <div class="login_elem">
+                    <label for="username">Username</label>
+                    <input type="text" id="username">
+                </div>
+
+                <div class="login_elem">
+                    <label for="password">Password</label>
+                    <input type="password" id="password">
+                </div>
+
+                <div class="login_elem">
+                    <button>Log in</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="signup_popup">
+            <div class="popup_close" onclick="closeSignUpForm()">&times;</div>
+            <div class="form">
+                
+                <div class="form_image">
+                    <img src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\logo.png">
+                </div>
+
+                <div class="login_label">Sign up</div>
+
+                <div class="login_elem">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName">
+                </div>
+
+                <div class="login_elem">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName">
+                </div>
+
+                <div class="login_elem">
+                    <label for="email">Email</label>
+                    <input type="text" id="email">
+                </div>
+
+                <div class="login_elem">
+                    <label for="username">Username</label>
+                    <input type="text" id="username">
+                </div>
+
+                <div class="login_elem">
+                    <label for="password">Password</label>
+                    <input type="password" id="password">
+                </div>
+
+                <div class="login_elem">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password">
+                </div>
+
+                <div class="login_elem">
+                    <button>Sign up</button>
+                </div>
+
+            </div>
+
+        </div>
 
 
         <!-- ################################################################################################################ -->
@@ -256,7 +336,7 @@
                 </div>
 
                 <div class="benbenefits_sub">
-                    <a href="#">
+                    <a href="C:\Users\student\Desktop\FrontEndFinalProject\Html\searchPage.html">
                         <button class="button">Rent my perfect car</button>
                     </a>
                 </div>

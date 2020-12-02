@@ -1,4 +1,6 @@
-// ----
+
+// --------------------------------------------------------------------------------------
+// Slider
 
 let maxSize = 6;
 let num = 0;
@@ -43,4 +45,21 @@ function slideRight() {
 		num = num - 1;
 	}
 
+}
+
+// --------------------------------------------------------------------------------------
+function openLogInForm(){
+	document.body.classList.add("showLogInForm");
+}
+
+function closeLogInForm(){
+	document.body.classList.remove("showLogInForm");
+}
+
+function openSignUpForm(){
+	document.body.classList.add("showSignUpForm");
+}
+
+function closeSignUpForm(){
+	document.body.classList.remove("showSignUpForm");
 }
