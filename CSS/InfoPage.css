@@ -1,0 +1,20 @@
+
+.info_text_content{
+	height: 1200px;
+	background-color: lightgrey;
+	padding-top: 50px;
+	/*padding-bottom: 50px;*/
+	padding-left: 300px;
+	padding-right: 300px;
+}
+
+.info_text{
+	height: 100%;
+	text-align: center;
+}
+
+.info_text_style{
+	text-align: initial;
+	font-size: 18px;
+	padding-top: 50px;
+}
