@@ -5,6 +5,10 @@ body {
 	margin: 0;
 }
 
+*:focus {
+    outline: none;
+}
+
 /*Header content classes*/
 
 .h_class{
@@ -42,6 +46,54 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     cursor: pointer;
+}
+
+.search_box{
+	background-color: lightgrey;
+	height: 30px;
+	border-radius: 40px;
+	float: right;
+	margin-top: 10px;
+}
+
+.search_box:hover > .srch_txt{
+	width: 240px;
+	padding-left: 10px;
+}
+
+.srch_txt{
+	border:none;
+	background:none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 18px;
+	transition: 0.5s;
+	line-height: 30px;
+	width: 0px;
+}
+
+.srch{
+	color: black;
+	background-color: white;
+	float: right;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+
+.srch:hover{
+	background-color: lightblue;
+}
+
+.srch:active{
+	color: black;
+	transform: scale(0.7);
 }
 
 /*log in popup*/
@@ -210,7 +262,7 @@ h2.slogan{
 .container{
 	background-color: #FFFFFF;
     height: 70px;
-    padding: 0 150px;*/
+    padding: 0 100px;
     line-height: 50px;
     background-color: lightgrey;
     border-radius: 30PX;
@@ -218,33 +270,31 @@ h2.slogan{
 }
 
 .location{
-	width: 33.3%;
+	width: 30%;
 	height: 100%;
 	margin: 0 0;
 	border: 0;
 	padding: 0;
 	float:left;
-	/*width: 100px;*/
+	padding-left: 40px;
 }
 
 .from{
-	width: 33.3%;
+	width: 30%;
 	height: 100%;
 	margin: 0 0;
 	border: 0;
 	padding: 0;
 	float:left;
-	/*width: 100px;*/
 }
 
 .until{
-	width: 33.3%;
+	width: 30%;
 	height: 100%;
 	margin: 0 0;
 	border: 0;
 	padding: 0;
 	float:left;
-	/*width: 100px;*/
 }
 
 .label{
@@ -254,6 +304,30 @@ h2.slogan{
     text-decoration: none;
     padding-left: 20px;
     line-height: 20px;
+}
+
+.search_button{
+	float: left;
+	padding-top: 23px;
+    padding-left: 12px;
+}
+
+.search_button i{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 50px; 
+	background-color: white;
+	cursor: pointer;
+}
+
+.search_button i:hover{
+	background-color: lightblue;
+}
+
+.search_button i:active{
+	transform: scale(0.7);
 }
 
 .input_style{
@@ -407,7 +481,7 @@ h2.slogan{
 	padding-right: 300px;
 	padding-top: 100px;
 	padding-bottom: 100px;
-	background-color: EEEEE9;
+	background-color: #EEEEE9;
 }
 
 .benbenefits_sub{

@@ -15,10 +15,12 @@ function changeH1Text(){
 
 function changeToTerms(){
 	document.getElementById("txt").innerHTML = "Terms";
+	document.getElementById("info_img").src = "C:/Users/student/Desktop/FrontEndFinalProject/Asserts/terms.jpg"
 	window.scrollTo(0, 0);
 }	
 
 function changeToPrivacy(){
 	document.getElementById("txt").innerHTML = "Privacy";
+	document.getElementById("info_img").src = "C:/Users/student/Desktop/FrontEndFinalProject/Asserts/privacy.jpg"
 	window.scrollTo(0, 0);
 }

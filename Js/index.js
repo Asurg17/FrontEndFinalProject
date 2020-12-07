@@ -63,3 +63,13 @@ function openSignUpForm(){
 function closeSignUpForm(){
 	document.body.classList.remove("showSignUpForm");
 }
+
+// --------------------------------------------------------------------------------------
+// var elems = document.body.getElementsByTagName("*");
+// for(i=0; i<elems.length; i++){
+// 	elems[i].style.display = "none";
+// }
+// --------------------------------------------------------------------------------------
+function search(){
+	window.location.href = "C:/Users/student/Desktop/FrontEndFinalProject/Html/searchPage.html"
+}
