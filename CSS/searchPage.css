@@ -1,0 +1,75 @@
+.m_content{
+
+	width: 100%;
+	display: flex;
+  	flex-direction: column;
+
+}
+
+.cars{
+
+	width: 100%;
+
+}
+
+.car_box{
+
+	width: 50%;
+	height: 400px;
+	opacity: 1.0;
+	float: left;
+	display: flex;
+	justify-content: center;
+	background-color: white;
+
+}
+.car_box:hover{
+	opacity: 0.90;
+}
+.sub_box{
+
+	width: 80%;
+	height: 300px;
+	cursor: pointer;
+	align-self: center;
+	border-radius: 10px;
+	background-color: #E3ECE9;
+
+}
+
+.sub_box_img{
+
+	width: 70%;
+	height: 100%;
+	float: left;
+	border-radius: 10px 0px 0px 10px; 
+	background-color: orange;
+
+}
+
+.car_description{
+
+	width: 30%;
+	height: 100%;
+	float: left;
+	display: inline-block;
+	justify-content: center;
+
+}
+
+.car_description h3{
+	height: 10%;
+	text-align: center;
+}
+
+
+.main_description{
+	display: inline-block;
+	justify-content: center;
+}
+
+.main_description div{
+	padding-left: 10%;
+	padding-top: 4%;
+	padding-bottom: 4%;
+}
