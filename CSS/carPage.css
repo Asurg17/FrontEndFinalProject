@@ -1,0 +1,109 @@
+
+
+.main_container{
+
+	width: 100%;
+	display: flex;
+	align-items: center;
+  	flex-direction: column;
+  	
+ }
+
+.images{
+
+	width: 100%;
+	display: flex;
+
+}
+
+.sub_arrow{
+
+	width: 10%;
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+
+}
+
+.sub_arrow div{
+
+	width: 80px;
+	height: 70px;
+	border-radius: 50%;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+
+}
+
+.sub_arrow div:hover{
+
+	background-color: #F5F5F5;
+
+}
+
+.sub_arrow div:active{
+
+	transform: scale(0.7);
+
+}
+
+
+.sub_photo{
+
+	width: 80%;
+	margin-top: 2%;
+	display: flex;
+    flex-direction: column;
+
+}
+
+.sub_car_name{
+
+	color: #111C30;
+	font-size: 200%;
+	font-weight: bold;
+	font-family: Garamond;
+	margin-top: 2%;
+	margin-bottom: 2%;
+
+}
+
+.sub_car_desc{
+
+	width: 40%;
+	padding-left: 30%; 
+	padding-right: 30%;
+	padding-bottom: 5%;
+	display: flex;
+
+}
+
+.car_desc{
+	
+	width: 50%
+
+}
+
+.owner_info{
+
+	width: 50%;
+
+}
+
+.label_style{
+
+	display: flex;
+	flex-direction: row;
+
+}
+
+.label_style p{
+	
+	color: #507087;
+	font-size: 130%;
+	font-weight: bold;
+	font-family: Garamond;
+	padding-right: 3%;
+}

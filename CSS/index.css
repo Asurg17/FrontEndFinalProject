@@ -431,6 +431,7 @@ h2.slogan{
  	width: 200px;
  	padding-left: 10px;
  	padding-right: 10px;
+ 	 scroll-behavior: smooth;
  }
 
 .browse_cars_img{

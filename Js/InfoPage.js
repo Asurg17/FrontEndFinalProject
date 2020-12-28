@@ -32,7 +32,7 @@ function changeToPrivacy(){
 function changeToVacancies(){
 	document.getElementById("txt").innerHTML = "Vacancies";
 	document.getElementById("info_img").src = "C:/Users/student/Desktop/FrontEndFinalProject/Asserts/vacancies.jpg"
-	document.getElementById("text").innerHTML = "In Our Company we have following vacancies: Web developer; Orecle developer; Website Administrator; Java developer; Car dealer;"
+	document.getElementById("text").innerHTML = "In Our Company we have following vacancies: Web developer; Orecle developer; Website Administrator; Java developer; Car dealer; Please contact us on our email address crss@gmail.com "
 	window.scrollTo(0, 0);
 }
 
