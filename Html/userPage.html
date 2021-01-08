@@ -20,7 +20,7 @@
 
         </header>
 
-        <!-- Popups add car popup-->
+        <!-- Popups(add car & change personal data) -->
 
         <div class="popup_overlay"></div>
 
@@ -35,7 +35,7 @@
                 <div class="popup_label">Add car</div>
 
                 <div class="popup_elem">
-                    <label for="car_name">Car name</label>
+                    <label for="car_name">Car Name</label>
                     <input type="text" id="car_name">
                 </div>
 
@@ -81,6 +81,45 @@
             </div>
 
         </div>
+
+        <div class="change_data_popup">
+            <div class="popup_close" onclick="closeChPopupForm()">&times;</div>
+            <div class="form">
+                
+                <div class="form_image">
+                    <img src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\logo.png">
+                </div>
+
+                <div class="popup_label">Change personal data</div>
+
+                <div class="popup_elem">
+                    <label for="user_name">User Name</label>
+                    <input type="text" id="user_name">
+                </div>
+
+                <div class="popup_elem">
+                    <label for="whole_name">Whole Name</label>
+                    <input type="text" id="whole_name">
+                </div>
+
+                <div class="popup_elem">
+                    <label for="contact">Contact</label>
+                    <input type="text" id="contact">
+                </div>
+
+                <div class="popup_elem">
+                    <label for="location">Location</label>
+                    <input type="text" id="location">
+                </div>
+
+                <div class="popup_elem">
+                    <button onclick="closeChPopupForm()">Change Data</button>
+                </div>
+
+            </div>
+
+        </div>
+
 
         <!-- User info -->
 
@@ -132,6 +171,7 @@
             <div class="add_car_button">
                 
                 <button class="button" onclick="openPopupForm()"> Add Car </button>
+                <button class="button" onclick="openChPopupForm()"> Change personal data </button>
 
             </div>
 

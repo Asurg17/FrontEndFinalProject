@@ -14,15 +14,42 @@
 	border-radius: 10px;
 }
 
+.change_data_popup{
+	position: absolute;
+	top: -300%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(1.15);
+	width: 400px;
+	/*height: 700px;*/
+	background-color: white;
+	z-index: 2;
+	opacity: 0;
+	box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+	transition: transform 300ms ease-in-out,opacity 300ms ease-in-out;
+	border-radius: 10px;
+}
+
 .showAddCarForm .popup_overlay {
-  display:block;
+    display:block;
+}
+
+.showChAddCarForm .popup_overlay{
+	display:block;
 }
 
 .showAddCarForm .add_car_popup {
-  top:60%;
-  opacity:1;
-  transform:translate(-50%,-50%) scale(1);
+	top:60%;
+	opacity:1;
+	transform:translate(-50%,-50%) scale(1);
 }
+
+.showChAddCarForm .change_data_popup {
+	top:60%;
+	opacity:1;
+	transform:translate(-50%,-50%) scale(1);
+}
+
+/*----------------------------------------------------------------------------*/
 
 .user_page_content{
 
@@ -100,6 +127,7 @@
 
 	display: flex;
 	align-items: center;
+	flex-direction: column;
 	justify-content: center;
 	margin-top: 100px;
 	margin-bottom: 100px;
