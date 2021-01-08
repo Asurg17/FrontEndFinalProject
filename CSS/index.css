@@ -571,6 +571,10 @@ h2.slogan{
 	align-self: center;
 }
 
+.ls_footer_sub a{
+	text-decoration: none;
+}
+
 .ls_f_text{
 	font-size: 15px;
 	font-weight: bold;

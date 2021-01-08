@@ -1,6 +1,6 @@
 
 /*Responsive Footer*/
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1550px) {
 
 	.footer_style{
 		padding-left: 20px !important;
@@ -16,9 +16,18 @@
    .basic_statistic_info, .ls_footer{
     	flex-direction: column;
    }
+
+   .ls_f_text, .f_text{
+   	    font-size: 25px;
+   }
+
+   .basic_statistic_info_sub h3{
+   	    font-size: 25px;
+   }
+
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
 
 	.basic_statistic_info_sub{
 		text-align: center;
@@ -26,4 +35,5 @@
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
+
 }
