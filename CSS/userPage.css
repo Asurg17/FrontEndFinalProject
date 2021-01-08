@@ -112,7 +112,7 @@
 
 }
 
-.user_info_sub label,p{
+.user_info_sub label, /*.user_info_sub*/ p{
 
 	margin: 0;
 	color: #111C30;
