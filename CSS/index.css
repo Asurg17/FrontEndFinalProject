@@ -532,6 +532,9 @@ h2.slogan{
 	padding-right: 300px;
 	padding-top: 100px;
 	padding-bottom: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .footer_ul{
@@ -542,8 +545,7 @@ h2.slogan{
 /*basic & statistic*/
 
 .basic_statistic_info{
-	display: flex;
-	justify-content: center;
+	align-self: center;
 }
 
 .basic_statistic_info_sub{
@@ -554,18 +556,9 @@ h2.slogan{
 	float: left;
 }
 
-.social_network{
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	float: right;
-}
-
 /*****/
 .ls_footer{
-	display: flex;
-	justify-content: center;
+	align-self: center;
 }
 
 .ls_footer_sub{

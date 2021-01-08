@@ -1,0 +1,29 @@
+
+/*Responsive Footer*/
+@media screen and (max-width: 1450px) {
+
+	.footer_style{
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+		padding-top: 20px !important;
+		padding-bottom: 20px !important;
+	}
+
+	.ls_footer{
+		display: flex;
+	}
+
+   .basic_statistic_info, .ls_footer{
+    	flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 550px) {
+
+	.basic_statistic_info_sub{
+		text-align: center;
+		width: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
