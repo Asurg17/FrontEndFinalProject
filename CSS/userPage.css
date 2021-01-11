@@ -1,11 +1,9 @@
 
 .add_car_popup{
 	position: absolute;
-	top: -300%;
-	left: 50%;
-	transform: translate(-50%,-50%) scale(1.15);
-	width: 400px;
-	/*height: 700px;*/
+	display: none;
+	width: 30%;
+	transform:scale(1.15);
 	background-color: white;
 	z-index: 2;
 	opacity: 0;
@@ -16,11 +14,9 @@
 
 .change_data_popup{
 	position: absolute;
-	top: -300%;
-	left: 50%;
-	transform: translate(-50%,-50%) scale(1.15);
-	width: 400px;
-	/*height: 700px;*/
+	display: none;
+	transform:scale(1.15);
+	width: 30%;
 	background-color: white;
 	z-index: 2;
 	opacity: 0;
@@ -38,15 +34,17 @@
 }
 
 .showAddCarForm .add_car_popup {
-	top:60%;
+	display: block;
+	left:35%;
 	opacity:1;
-	transform:translate(-50%,-50%) scale(1);
+	transform: scale(1);
 }
 
 .showChAddCarForm .change_data_popup {
-	top:60%;
+	display: block;
+	left:35%;
 	opacity:1;
-	transform:translate(-50%,-50%) scale(1);
+	transform: scale(1);
 }
 
 /*----------------------------------------------------------------------------*/
@@ -131,5 +129,142 @@
 	justify-content: center;
 	margin-top: 100px;
 	margin-bottom: 100px;
+
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*Responsive*/
+
+@media screen and (max-width: 1200px) {
+	
+	.user_page_data{
+		flex-direction: column;
+	}
+
+	.user_image, .user_info{
+		width: 100%;
+	}
+
+	.user_info{
+		align-items: center;
+	}
+
+	.user_info_sub{
+		margin-left: 0;
+	}
+
+	.user_info_sub label,p, .user_image i{
+		font-size: 180%;
+	}
+
+	.add_car_button button{
+		font-size: 150%;
+	}
+
+	/*popups*/
+
+	.add_car_popup {
+		width: 60%;
+		top: 10%;
+		left: 20% !important;
+	}
+
+	.change_data_popup{
+		width: 60%;
+		top: 10%;
+		left: 20% !important;
+	}
+
+}
+
+@media screen and (max-width: 900px) {
+	.user_info_sub label,p, .user_image i{
+		font-size: 150%;
+	}
+
+	.add_car_button button{
+		font-size: 120%;
+	}
+
+	/*popups*/
+
+	.add_car_popup {
+		width: 70%;
+		top: 10%;
+		left: 15% !important;
+	}
+
+	.change_data_popup{
+		width: 70%;
+		top: 10%;
+		left: 15% !important;
+	}
+
+}
+
+@media screen and (max-width: 650px) {
+
+	/*popups*/
+
+	.add_car_popup {
+		width: 80%;
+		top: 10%;
+		left: 10% !important;
+	}
+
+	.change_data_popup{
+		width: 80%;
+		top: 10%;
+		left: 10% !important;
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+
+	/*popups*/
+
+	.add_car_popup {
+		width: 90%;
+		top: 10%;
+		left: 5% !important;
+	}
+
+	.change_data_popup{
+		width: 90%;
+		top: 10%;
+		left: 5% !important;
+	}
+
+}
+
+@media screen and (max-width: 450px) {
+
+	.add_car_button button{
+		font-size: 80%;
+	}
+
+	/*popups*/
+
+	.add_car_popup {
+		width: 100%;
+		top: 10%;
+		left: 0% !important;
+	}
+
+	.change_data_popup{
+		width: 100%;
+		top: 10%;
+		left: 0% !important;
+	}
+
+}
+
+@media screen and (max-width: 320px) {
+
+	.user_info_sub label,p, .user_image i{
+		font-size: 100%;
+	}
 
 }
