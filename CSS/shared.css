@@ -48,6 +48,16 @@
 		text-align: center;
 	}
 
+	.nav{
+		width: 100%;
+		display: flex;
+    	justify-content: center;
+	}
+
+	.search_box{
+		margin-left: 5%;
+	}
+
 }
 
 /*popups*/
@@ -77,6 +87,20 @@
 
 	.form {
     	padding: 20px;
+	}
+
+	.search_box:hover > .srch_txt{
+		width: 200px;
+		padding-left: 10px;
+	}
+
+}
+
+@media screen and (max-width: 300px) {
+
+	.search_box:hover > .srch_txt{
+		width: 150px;
+		padding-left: 10px;
 	}
 
 }

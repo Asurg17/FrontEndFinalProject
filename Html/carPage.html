@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="C:\Users\student\Desktop\FrontEndFinalProject\CSS\index.css">
         <link rel="stylesheet" type="text/css" href="C:\Users\student\Desktop\FrontEndFinalProject\CSS\shared.css">
         <link rel="stylesheet" type="text/css" href="C:\Users\student\Desktop\FrontEndFinalProject\CSS\carPage.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <!-- <script type="text/javascript" src="C:\Users\student\Desktop\FrontEndFinalProject\Js\index.js"></script> -->
     </head>
@@ -21,8 +22,8 @@
 
             <div class="nav">
 
-                <div class="search_box">
-                    <input class="srch_txt" type="text" placeholder="Type here to search" name="">
+                <div class="search_box" style="margin-right: 5%;">
+                    <input class="srch_txt" type="text" placeholder="Type here to search" name="" >
                     <a class="srch" href="C:/Users/student/Desktop/FrontEndFinalProject/Html/searchPage.html">
                         <i class="fas fa-search"></i>
                     </a>
@@ -38,21 +39,21 @@
             <div class="images">
                 
                 <div class="sub_arrow">
-                    <div> 
-                        <i class="fas fa-angle-double-left"></i>
-                    </div>
+
+                    <i class="fas fa-angle-double-left"></i>
+                
                 </div>
 
         		<div class="sub_photo"> 
 
-        			<img id="car_img" src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\Privacy.jpg">
+        			<img id="car_img" src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\b_one.jpg">
 
         		</div>
 
                 <div class="sub_arrow">
-                    <div>
-                        <i class="fas fa-angle-double-right"></i>
-                    </div>
+                    
+                    <i class="fas fa-angle-double-right"></i>
+                    
                 </div>
 
             </div>
@@ -67,87 +68,108 @@
 
                 <div class="car_desc">
         			
-        			<div>
-    	                <i class="fas fa-calendar-alt"></i>
-                        <div class="label_style">
-                            <p id="year"> Model Year: 2018 </p>
-    	                </div>
-                    </div>
-
-    	            <div> 
-    	                <i class="fas fa-car"></i>
-                        <div class="label_style">
-    	                    <p id="engine"> Engine: 4.5l </p>
-    	                </div>
-                    </div>
-
-    	            <div>
-    	                <i class="fas fa-cogs"></i>
-                        <div class="label_style">
-                            <p id="transmission"> Transmission: Tiptronic </p>
-                        </div>
-    	            </div>
-
-    	            <div>
-    	                <i class="fas fa-arrows-alt-h"></i>
-                        <div class="label_style">
-                            <p id="helm"> Helm: Left </p>
-                        </div>
-    	            </div>
-
-                    <div>
-                        <i class="fas fa-charging-station"></i>
-                        <div class="label_style">
-                            <p id="electric_flag"> Electric: none </p>
+        			<div class="car_desc_resp">
+                        <div>
+                            <div class="label_style">
+                                <i class="fas fa-calendar-alt"></i>
+                                <p id="year"> Model Year: 2018 </p>
+    	                    </div>
                         </div>
                     </div>
 
-                    <div>
-                        <i class="fas fa-sort-numeric-up"></i>
-                        <div class="label_style">
-                            <p id="seats"> Seats: 5 </p>
+                    <div class="car_desc_resp">
+        	            <div>
+                            <div class="label_style">
+                                <i class="fas fa-car"></i>
+        	                    <p id="engine"> Engine: 4.5l </p>
+        	                </div>
                         </div>
                     </div>
 
-    	            <div>
-    	                <i class="fas fa-dollar-sign"></i>
-                        <div class="label_style">
-                           <p id="price"> Price: 30$/day </p>
-                        </div>    
-    	            </div>
+                    <div class="car_desc_resp">
+        	            <div>
+        	                <div class="label_style">
+                                <i class="fas fa-cogs"></i>
+                                <p id="transmission"> Transmission: Tiptronic </p>
+                            </div>
+        	            </div>
+                    </div>
+
+                    <div class="car_desc_resp">
+        	            <div>
+                            <div class="label_style">
+                                <i class="fas fa-arrows-alt-h"></i>
+                                <p id="helm"> Helm: Left </p>
+                            </div>
+        	            </div>
+                    </div>
+
+                    <div class="car_desc_resp">
+                        <div>
+                            <div class="label_style">
+                                <i class="fas fa-gas-pump"></i>
+                                <p id="fuel"> Fuel: electric </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car_desc_resp">
+                        <div>
+                            <div class="label_style">
+                                <i class="fas fa-sort-numeric-up"></i>
+                                <p id="seats"> Seats: 5 </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car_desc_resp">
+        	            <div>
+                            <div class="label_style">
+                                <i class="fas fa-dollar-sign"></i>
+                                <p id="price"> Price: 30$/day </p>
+                            </div>    
+        	            </div>
+                    </div>
 
                 </div>
 
                 <div class="owner_info">
                     
-                    <div>
-                        <i class="far fa-user"></i>
-                        <div class="label_style">
-                           <p id="owner"> Owner name: Frenk </p>
+                    <div class="car_desc_resp">
+                        <div>
+                            <div class="label_style">
+                                <i class="far fa-user"></i>
+                                <p id="owner"> Owner name: Frenk </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div>
-                        <i class="fas fa-mobile-alt"></i>
-                        <div class="label_style">
-                           <p id="contact"> Contact: +(995) 598654532 </p>
+                    <div class="car_desc_resp">
+                        <div>
+                            <div class="label_style">
+                                <i class="fas fa-mobile-alt"></i>
+                                <p id="contact"> Contact: +(995) 598654532 </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div>
-                        <i class="fas fa-map-marked-alt"></i>
-                        <div class="label_style">
-                           <p id="location"> Location: Georgia, Kutaisi </p>
+                    <div class="car_desc_resp">
+                        <div>
+                            <div class="label_style">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <p id="location"> Location: Georgia, Kutaisi </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div>
-                        <i class="far fa-thumbs-up"></i>
-                        <div class="label_style">
-                           <p id="raiting"> Raiting: 4.5 </p>
+                    <div class="car_desc_resp">
+                        <div>
+                            <div class="label_style">
+                                <i class="far fa-thumbs-up"></i>
+                                <p id="raiting"> Raiting: 4.5 </p>
+                            </div>
                         </div>
                     </div>
-
 
                 </div>
 
