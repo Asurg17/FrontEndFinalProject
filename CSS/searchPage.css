@@ -15,7 +15,9 @@
 .car_box{
 
 	width: 50%;
-	height: 400px;
+	height: 350px;
+	padding-top: 3%;
+	padding-bottom: 3%;
 	opacity: 1.0;
 	float: left;
 	display: flex;
@@ -23,27 +25,6 @@
 	background-color: white;
 
 }
-
-/*@media only screen and (max-width: 600px) {
-  .car_box{
-  	width: 100%;
-  	height: 400px;
-	opacity: 1.0;
-	float: left;
-	display: flex;
-	justify-content: center;
-	background-color: white;
-  }
-
-  .logo{
-  	text-align: center;
-  }
-
-  .h_class{
-  	display: flex;
-  	justify-content: center;
-  }
-}*/
 
 .car_box:hover{
 
@@ -54,7 +35,7 @@
 .sub_box{
 
 	width: 80%;
-	height: 300px;
+	height: 100%;
 	cursor: pointer;
 	align-self: center;
 	border-radius: 10px;
@@ -135,5 +116,110 @@
 .rating_div i{
 
 	color: #507087;
+
+}
+
+/*responsive*/
+
+@media screen and (max-width: 1200px) {
+
+	.car_box{
+		width: 100%;
+	}
+
+	.sub_box{
+		width: 60%;
+	}
+
+}
+
+@media screen and (max-width: 900px) {
+
+	.sub_box{
+		width: 70%;
+	}
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+	.sub_box{
+		width: 80%;
+	}
+
+}
+
+
+@media screen and (max-width: 750px) {
+
+	.sub_box{
+		width: 90%;
+	}
+
+}
+
+@media screen and (max-width: 650px) {
+
+	.sub_box{
+		width: 95%;
+	}
+
+	.car_box{
+		height: 300px;
+	}
+
+	.car_description{
+		font-size: 80%;
+	}
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+	.car_box{
+		height: auto;
+	}
+
+	.sub_box{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.sub_box_img{
+		width: 100%;
+		border-radius: 10px 10px 0px 0px;
+	}
+
+	.main_description{
+		display: none;
+	}
+
+	.car_description{
+		width: 100%;
+	}
+
+	.car_name, .rating_div{
+		padding-bottom: 10px;
+		font-size: 140%;
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+
+	.car_name, .rating_div{
+		font-size: 100%;
+	}
+
+}
+
+
+@media screen and (max-width: 300px) {
+
+	.car_name, .rating_div{
+		font-size: 80%;
+	}
 
 }

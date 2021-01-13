@@ -156,7 +156,7 @@
 	}
 
 	.sub_car_name p{
-		font-size: 25px;
+		font-size: 22px;
 	}
 
 	.sub_arrow{
@@ -167,6 +167,15 @@
 
 @media screen and (max-width: 400px) {
 
+	.car_desc_resp{
+    	font-size: 13px;
+	}
+
+	.sub_car_name p{
+		font-size: 20px;
+	}
+
+
 	.sub_arrow{
 		font-size: 15px;
 	}
@@ -174,6 +183,14 @@
 }
 
 @media screen and (max-width: 300px) {
+
+	.car_desc_resp{
+    	font-size: 12px;
+	}
+
+	.sub_car_name p{
+		font-size: 17px;
+	}
 
 	.sub_arrow{
 		font-size: 10px;
