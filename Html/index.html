@@ -5,9 +5,10 @@
         <link rel="stylesheet" type="text/css" href="C:\Users\student\Desktop\FrontEndFinalProject\CSS\index.css">
         <link rel="stylesheet" type="text/css" href="C:\Users\student\Desktop\FrontEndFinalProject\CSS\shared.css">
         <script type="text/javascript" src="C:\Users\student\Desktop\FrontEndFinalProject\Js\index.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=0.9">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     </head>
-    <body>
+    <body onload="checkWindowSize()">
 
         <!-- ################################################################################################################ -->
         <!-- header part -->
@@ -19,8 +20,8 @@
                 </a>
             </div>
 
-            <div class="nav">
-
+            <div class="popups_div"> 
+                
                 <div class="icon">
                     <i class='far fa-user-circle' style="line-height: 50px;"></i>
                 </div>
@@ -28,14 +29,17 @@
                 <p class="nav_style" onclick="openSignUpForm()">Sign up</p>
                 <p class="nav_style" onclick="openLogInForm()">Log in</p>
 
-                <div class="search_box">
+            </div>
+
+            <div class="nav">
+                
+                <div class="search_box" style="margin-right: 3px;">
                     <input class="srch_txt" type="text" placeholder="Type here to search" name="">
                     <a class="srch" href="C:/Users/student/Desktop/FrontEndFinalProject/Html/searchPage.html">
                         <i class="fas fa-search"></i>
                     </a>
-
                 </div>
-
+            
             </div>
 
         </header>
@@ -144,7 +148,7 @@
                         </div>
 
                         <div>
-                            <input type="text" name="location" placeholder="Location" class="input_style" style="border-radius: 15px 0 0 15px">      
+                            <input type="text" name="location" placeholder="Location" class="input_style" style="border-radius: 15px 0 0 15px"> 
                         </div>
                     </div>
 
@@ -170,8 +174,10 @@
                         </div>
                     </div>
 
-                    <div class="search_button" onclick="search()">
-                        <i class="fas fa-search"></i>
+                    <div class="srch_button_div">
+                        <div class="search_button" onclick="search()">
+                            <i class="fas fa-search"></i>
+                        </div>
                     </div>
 
                 </form>
@@ -196,17 +202,17 @@
             </div>
 
             <!-- Browse by category -->
-            <div style="display: flex; justify-content: center;">
+            <div class="browse">
 
                 <div style="display:flex; align-items: center; width: 63px;">
-                   <div class="arrow_sub" onclick="slideRight()">
-                        <i class="arrow left"></i>
+                   <div class="arrow_sub">
+                        <i class="arrow left" onclick="slideRight()"></i>
                     </div>
                 </div>
 
                 <div class = "browse_cars">
                     <!-- Vans -->
-                    <div class="browse_cars_style">
+                    <div class="browse_cars_style" id="van">
                         
                         <a href="C:\Users\student\Desktop\FrontEndFinalProject\Html\searchPage.html?Van" style="text-decoration: none;"> 
                             <img src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\van.jpg" class="browse_cars_img"> 
@@ -217,7 +223,7 @@
                     </div>
 
                     <!-- MiniVans -->
-                    <div class="browse_cars_style">
+                    <div class="browse_cars_style" id="minivan">
                         
                         <a href="C:\Users\student\Desktop\FrontEndFinalProject\Html\searchPage.html?Minivan" style="text-decoration: none;"> 
                             <img src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\minivan.jpg" class="browse_cars_img"> 
@@ -228,7 +234,7 @@
                     </div>
 
                     <!-- Suv -->
-                    <div class="browse_cars_style">
+                    <div class="browse_cars_style" id="suv">
                         
                         <a href="C:\Users\student\Desktop\FrontEndFinalProject\Html\searchPage.html?Suv" style="text-decoration: none;"> 
                             <img src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\suv.jpg" class="browse_cars_img"> 
@@ -239,7 +245,7 @@
                     </div>
 
                     <!-- Cars -->
-                    <div class="browse_cars_style">
+                    <div class="browse_cars_style" id="car">
                         
                         <a href="C:\Users\student\Desktop\FrontEndFinalProject\Html\searchPage.html?Car" style="text-decoration: none;"> 
                             <img src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\car.jpg" class="browse_cars_img"> 
@@ -250,7 +256,7 @@
                     </div>
 
                     <!-- Retro -->
-                    <div class="browse_cars_style">
+                    <div class="browse_cars_style" id="retro">
                         
                         <a href="C:\Users\student\Desktop\FrontEndFinalProject\Html\searchPage.html?Retro" style="text-decoration: none;"> 
                             <img src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\retro.jpg" class="browse_cars_img"> 
@@ -261,7 +267,7 @@
                     </div>
 
                     <!-- Sport -->
-                    <div class="browse_cars_style">
+                    <div class="browse_cars_style" id="sport">
                         
                         <a href="C:\Users\student\Desktop\FrontEndFinalProject\Html\searchPage.html?Sport" style="text-decoration: none;"> 
                             <img src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\sport.jpg" class="browse_cars_img"> 
@@ -272,7 +278,7 @@
                     </div>
 
                     <!-- Luxury -->
-                    <div class="browse_cars_style" style="display: none;">
+                    <div class="browse_cars_style" id="luxury" style="display: none;">
                         
                         <a href="C:\Users\student\Desktop\FrontEndFinalProject\Html\searchPage.html?Luxury" style="text-decoration: none;" > 
                             <img src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\luxury.jpg" class="browse_cars_img"> 
@@ -283,7 +289,7 @@
                     </div>
 
                     <!-- Motorcycles -->
-                    <div class="browse_cars_style" style="display: none;">
+                    <div class="browse_cars_style" id="motorcycle" style="display: none;">
 
                         <a href="C:\Users\student\Desktop\FrontEndFinalProject\Html\searchPage.html?Motorcycle" style="text-decoration: none;"> 
                             <img src="C:\Users\student\Desktop\FrontEndFinalProject\Asserts\motorcycle.jpg" class="browse_cars_img"> 
@@ -296,8 +302,8 @@
                 </div>
 
                 <div style="display:flex; align-items: center; width: 63px;">
-                   <div class="arrow_sub" onclick="slideLeft()">
-                        <i class="arrow right"></i>
+                   <div class="arrow_sub">
+                        <i class="arrow right" onclick="slideLeft()"></i>
                     </div>
                 </div>
 

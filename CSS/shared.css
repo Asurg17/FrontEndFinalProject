@@ -85,10 +85,6 @@
 
 @media screen and (max-width: 400px) {
 
-	.form {
-    	padding: 20px;
-	}
-
 	.search_box:hover > .srch_txt{
 		width: 200px !important;
 		padding-left: 10px;

@@ -1,9 +1,107 @@
 
+
+// ---------------------------------------
+let maxSize = 6;
+let num = 0;
+
+function checkWindowSize(){
+
+	var w = window.innerWidth;
+
+	if(w <= 1550){
+		
+		maxSize = 5;
+		
+		document.getElementById("sport").style.display="none";
+
+	}else{
+
+		document.getElementById("sport").style.display="flex";
+
+	}
+
+	w = window.innerWidth;
+
+	if(w <= 1350){
+		
+		maxSize = 4;
+
+		document.getElementById("retro").style.display="none";
+
+	}else{
+
+		document.getElementById("retro").style.display="flex";
+
+	}
+
+	w = window.innerWidth;
+
+	if(w <= 1150){
+		
+		maxSize = 3;
+
+		document.getElementById("car").style.display="none";
+
+	}else{
+
+		document.getElementById("car").style.display="flex";
+
+	}
+
+	w = window.innerWidth;
+
+	if(w <= 1000){
+		
+		maxSize = 2;
+
+		document.getElementById("suv").style.display="none";
+
+	}else{
+
+		document.getElementById("suv").style.display="flex";
+
+	}
+
+	w = window.innerWidth;
+
+	if(w <= 650){
+		
+		maxSize = 1;
+
+		document.getElementById("minivan").style.display="none";
+
+	}else{
+
+		document.getElementById("minivan").style.display="flex";
+
+	}
+
+	w = window.innerWidth;
+
+	//######################## 
+
+	if(w > 650){
+		maxSize = 2;
+	}
+	if(w > 1000){
+		maxSize = 3;
+	}
+	if(w > 1150){
+		maxSize = 4;
+	}
+	if(w > 1350){
+		maxSize = 5;
+	}
+	if(w > 1550){
+		maxSize = 6;
+	}
+
+}
+
+
 // --------------------------------------------------------------------------------------
 // Slider
 
-let maxSize = 6;
-let num = 0;
 
 function slideLeft() {
 
@@ -29,7 +127,7 @@ function slideRight() {
 
 	arr[index].style.display = "none";
 
-	index = index - 6;
+	index = index - maxSize;
 
 	if(index < 0){
 		index = size + index;
@@ -73,3 +171,9 @@ function closeSignUpForm(){
 function search(){
 	window.location.href = "C:/Users/student/Desktop/FrontEndFinalProject/Html/searchPage.html"
 }
+
+
+
+
+// Event listeners
+window.addEventListener("resize", checkWindowSize);

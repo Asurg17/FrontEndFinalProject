@@ -17,6 +17,11 @@ body {
     padding-left: 2%;
 }
 
+.popups_div{
+	width: 100%;
+	height: 50px;
+}
+
 .logo{
 	width: 50%;
 	height: 100%;
@@ -261,7 +266,6 @@ h2.slogan{
 
 .container{
 	background-color: #FFFFFF;
-    height: 70px;
     padding: 0 100px;
     line-height: 50px;
     background-color: lightgrey;
@@ -271,17 +275,16 @@ h2.slogan{
 
 .location{
 	width: 30%;
-	height: 100%;
+	height: 70px;
 	margin: 0 0;
 	border: 0;
 	padding: 0;
 	float:left;
-	padding-left: 40px;
 }
 
 .from{
 	width: 30%;
-	height: 100%;
+	height: 70px;
 	margin: 0 0;
 	border: 0;
 	padding: 0;
@@ -290,7 +293,7 @@ h2.slogan{
 
 .until{
 	width: 30%;
-	height: 100%;
+	height: 70px;
 	margin: 0 0;
 	border: 0;
 	padding: 0;
@@ -306,10 +309,18 @@ h2.slogan{
     line-height: 20px;
 }
 
+.srch_button_div{
+
+	width: 10%;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+
+}
+
 .search_button{
-	float: left;
-	padding-top: 23px;
-    padding-left: 12px;
+	margin-top: 10px;
+	align-self: center;
 }
 
 .search_button i{
@@ -338,9 +349,7 @@ h2.slogan{
 }
 
 .middle_content{
-	/*background: url("C:/Users/student/Desktop/FrontEndFinalProject/Asserts/background.jpg") 50% 50% no-repeat;*/
-	height:100%;
-	/*background-color: black;*/
+	padding-top: 50px; 
 }
 
 .m_image_div_style{
@@ -366,7 +375,6 @@ h2.slogan{
 }
 
 .categories_style{
-	height: 50px; 
 	padding: 10px 70px 10px 70px;
 }
 
@@ -410,6 +418,10 @@ h2.slogan{
 	padding-left: 20px;
 }
 
+.arrow_sub i{
+	cursor: pointer;
+}
+
 .arrow:active{
 	border: solid #3A302E;
 	border-width: 0 3px 3px 0;
@@ -418,6 +430,11 @@ h2.slogan{
   
 
 /*Arrows end*/
+
+.browse{
+	display: flex; 
+	justify-content: center;
+}
 
 .browse_cars{
 	padding: 30px 30px 30px 30px;
@@ -497,6 +514,7 @@ h2.slogan{
 	padding-right: 20px;
 	padding-top: 30px;
 	padding-bottom: 30px;
+	text-align: center;
 }
 
 /*Search Button*/
@@ -584,4 +602,249 @@ h2.slogan{
 .f_text{
 	text-decoration: none;
 	text-align: center;
+}
+
+
+/*Responsive*/
+
+
+@media screen and (max-width: 1600px) {
+
+	.benefits_sub{
+		text-align: center;
+	}
+
+	.benefits_sub_div{
+		text-align: center;
+		font-size: 25px;
+	}
+
+	.benefits{
+		padding-left: 200px;
+		padding-right: 200px;
+	}
+
+	.container{
+		margin:0px;
+	}
+
+	.location, .from, .until, .srch_button_div{
+		height: 100px;
+	}
+
+	.label{
+		font-size: 15px;
+	}
+
+	.input_style{
+		font-size: 20px;
+	}
+
+
+}
+
+
+@media screen and (max-width: 1250px) {
+
+	.benefits{
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	.benefits_sub_div{
+		font-size: 20px;
+	}
+
+	.container{
+		padding: 0 50px;
+	}
+
+}
+
+@media screen and (max-width: 1200px) {
+
+	.popups_div{
+		width: 100%;
+		display:flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.icon{
+		display: none;
+	}
+
+	.nav_style{
+		font-size: 20px;
+	}
+
+	.search_box{
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+
+}
+
+@media screen and (max-width: 1150px) {
+
+	.location{
+		padding-top: 20px;
+	}
+
+	.container{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.location, .from, .until, .srch_button_div{
+		width: 100%;
+	}
+
+	.input_style{
+		border-radius: 15px 15px !important;
+	}
+
+}
+
+@media screen and (max-width: 1000px) {
+
+	.benefits{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+}
+
+@media screen and (max-width: 900px) {
+
+	.benbenefits_sub{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.benefits_sub_div{
+		width: auto;
+	}
+
+	.m_image_div_style{
+		height: 300px;
+	}
+
+}
+
+@media screen and (max-width: 650px) {
+
+	.browse_cars{
+		width: 60%;
+		height: 250px;
+	}
+
+	.browse_cars_img, .browse_cars_style{
+		width: 100%;
+		height: 100%;
+	}
+
+	.cl1{
+		text-align: center;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+
+	.m_image_div_style{
+		height: 200px;
+	}
+
+	.dot{
+		width: 25px;
+		height: 25px;
+	}
+
+	.container {
+    	padding: 0px 20px;
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+
+	.browse_cars{
+		width: 55%;
+		height: 200px;
+	}
+
+	.cl1{
+		font-size:15px;
+	}
+
+	.form{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+
+	.benbenefits_sub{
+		font-size: 15px;
+	}
+
+	.m_image_div_style{
+		height: 150px;
+	}
+
+	.dot{
+		width: 20px;
+		height: 20px;
+	}
+
+	.browse_cars{
+		width: 80%;
+		height: 150px;
+		padding:0px;
+		padding-top: 10px;
+	}
+
+}
+
+@media screen and (max-width: 350px) {
+
+	.location, .from, .until, .srch_button_div {
+
+		height: 80px;
+		f
+
+	}
+
+}
+
+@media screen and (max-width: 320px) {
+
+	.browse_cars{
+		height: 130px;
+	}
+
+	.form{
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+
+	.categories_style, .browse, .white_space{
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 280px) {
+
+	.browse_cars{
+		height: 100px;
+	}
+
+	.cl1{
+		font-size:13px;
+	}
+
 }
