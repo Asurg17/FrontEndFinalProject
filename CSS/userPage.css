@@ -25,11 +25,28 @@
 	border-radius: 10px;
 }
 
+.change_password_popup{
+	position: absolute;
+	display: none;
+	transform:scale(1.15);
+	width: 30%;
+	background-color: white;
+	z-index: 2;
+	opacity: 0;
+	box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+	transition: transform 300ms ease-in-out,opacity 300ms ease-in-out;
+	border-radius: 10px;
+}
+
 .showAddCarForm .popup_overlay {
     display:block;
 }
 
 .showChAddCarForm .popup_overlay{
+	display:block;
+}
+
+.showChPasswordForm .popup_overlay{
 	display:block;
 }
 
@@ -41,6 +58,13 @@
 }
 
 .showChAddCarForm .change_data_popup {
+	display: block;
+	left:35%;
+	opacity:1;
+	transform: scale(1);
+}
+
+.showChPasswordForm .change_password_popup{
 	display: block;
 	left:35%;
 	opacity:1;

@@ -149,6 +149,40 @@
 
         </div>
 
+        <div class="change_password_popup">
+            <div class="popup_close" onclick="closeChPswPopupForm()">&times;</div>
+            
+            <form class="form">
+                
+                <div class="form_image">
+                    <img src="..\Asserts\logo.png">
+                </div>
+
+                <div class="popup_label">Change Password</div>
+
+                <div class="popup_elem">
+                    <label for="old_password">Current Password</label>
+                    <input type="password" id="old_password">
+                </div>
+
+                <div class="popup_elem">
+                    <label for="new_password">New Password</label>
+                    <input type="password" id="new_password">
+                </div>
+
+                <div class="popup_elem">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password">
+                </div>
+
+                <div class="popup_elem">
+                    <button onclick="closeChPswPopupForm()">Change Password</button>
+                </div>
+
+            </form>
+
+        </div>
+
 
         <!-- User info -->
 
@@ -200,6 +234,7 @@
             <div class="add_car_button">
                 
                 <button class="button" onclick="openPopupForm()"> Add Car </button>
+                <button class="button" onclick="openChPswPopupForm()"> Change Password </button>
                 <button class="button" onclick="openChPopupForm()"> Change personal data </button>
 
             </div>
