@@ -355,8 +355,8 @@ h2.slogan{
 .m_image_div_style{
 	height: 400px;
 	width: 100%;
-	background-size: cover;
-	background-image: url('C:/Users/student/Desktop/FrontEndFinalProject/Asserts/test_var.jpg');
+	background-size: cover; 
+	background-image: url("../Asserts/test_var.jpg");
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;

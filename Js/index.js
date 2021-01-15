@@ -169,11 +169,8 @@ function closeSignUpForm(){
 // }
 // --------------------------------------------------------------------------------------
 function search(){
-	window.location.href = "C:/Users/student/Desktop/FrontEndFinalProject/Html/searchPage.html"
+	window.location.href = "../Html/searchPage.html"
 }
-
-
-
 
 // Event listeners
 window.addEventListener("resize", checkWindowSize);
