@@ -162,6 +162,11 @@ function closeSignUpForm(){
 	document.body.classList.remove("showSignUpForm");
 }
 
+function closeEveryForm(){
+	document.body.classList.remove("showLogInForm");
+	document.body.classList.remove("showSignUpForm");
+}
+
 // --------------------------------------------------------------------------------------
 // var elems = document.body.getElementsByTagName("*");
 // for(i=0; i<elems.length; i++){

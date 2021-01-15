@@ -14,3 +14,8 @@ function openChPopupForm(){
 function closeChPopupForm(){
 	document.body.classList.remove("showChAddCarForm");
 }
+
+function closeEveryForm(){
+	document.body.classList.remove("showAddCarForm");
+	document.body.classList.remove("showChAddCarForm");
+}

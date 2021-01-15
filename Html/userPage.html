@@ -24,7 +24,7 @@
 
         <!-- Popups(add car & change personal data) -->
 
-        <div class="popup_overlay"></div>
+        <div class="popup_overlay" onclick="closeEveryForm()"></div>
 
         <div class="add_car_popup">
             <div class="popup_close" onclick="closePopupForm()">&times;</div>
@@ -43,8 +43,18 @@
                 </div>
 
                 <div class="popup_elem">
+                    <label for="model">Model</label>
+                    <input type="text" id="model">
+                </div>
+
+                <div class="popup_elem">
                     <label for="model_year">Model Year</label>
                     <input type="text" id="model_year">
+                </div>
+
+                <div class="popup_elem">
+                    <label for="category">Category</label>
+                    <input type="text" id="category">
                 </div>
 
                 <div class="popup_elem">
@@ -63,8 +73,13 @@
                 </div>
 
                 <div class="popup_elem">
-                    <label for="electric">Electric</label>
-                    <input type="text" id="electric">
+                    <label for="fuel">Fuel</label>
+                    <input type="text" id="fuel">
+                </div>
+
+                <div class="popup_elem">
+                    <label for="color">Color</label>
+                    <input type="text" id="color">
                 </div>
 
                 <div class="popup_elem">
@@ -75,7 +90,17 @@
                 <div class="popup_elem">
                     <label for="price">Price</label>
                     <input type="text" id="price">
-                </div>                
+                </div> 
+
+                <div class="popup_elem">
+                    <label for="images">Images</label>
+                    <input type="file" id="images" style="font-size: 10px; padding: 3px 5px; height: 100%" multiple>
+                </div>
+
+                <div class="popup_elem">
+                    <label for="description">Car Description</label>
+                    <textarea name="textarea" id="description" style="width: 100%"></textarea>
+                </div>
 
                 <div class="popup_elem">
                     <button onclick="closePopupForm()">Add Car</button>
