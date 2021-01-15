@@ -216,7 +216,7 @@ body {
 	border-radius: 5px;
 }
 
-.popup_elem button{
+/*.popup_elem button{
 	margin-top: 5px;
 	width: 100%;
 	padding: 10px 0px;
@@ -234,6 +234,23 @@ body {
 }
 
 .popup_elem button:hover{
+	opacity: 1;
+}*/
+
+.submit{
+	padding: 5px 0px !important;
+	text-transform: uppercase;
+	outline: none!important;
+	border: none!important;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: #BE321B !important;
+	color: white;
+	opacity: 0.5;
+	transition: 0.3s;
+}
+
+.submit:hover{
 	opacity: 1;
 }
 
