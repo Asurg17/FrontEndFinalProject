@@ -5,8 +5,9 @@
         <link rel="stylesheet" type="text/css" href="..\CSS\searchPage.css">
         <link rel="stylesheet" type="text/css" href="..\CSS\shared.css">
         <link rel="stylesheet" type="text/css" href="..\CSS\index.css">
+        <script type="text/javascript" src="..\Js\searchPage.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script> 
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     </head>
 
     <body>
@@ -36,7 +37,252 @@
 
         <div class="m_content">
 
-            <menu> </menu>
+            <div class="filter">
+
+                <div class="filter_header">
+
+                    <h2>Filter</h2>       
+                    <i class="fas fa-sort-amount-down" onclick="showFilter()"></i>
+
+                </div>
+
+                <div class="filter_sub" id="filter_sub">
+
+                    <div class="sub_filter" id="sub_filter">
+                    
+                        <div class="location_time">
+                            
+                            <div class="sub_location_time">
+                                <div>
+                                    <label>Where</label> 
+                                    <input type="text" name="location" placeholder="Location">
+                                </div>
+                            </div>
+
+                            <!--  -->
+                            <div class="sub_location_time">
+                                <div>
+                                    <label>From</label> 
+                                    <input type="datetime-local" name="from">
+                                </div>
+                            </div>
+
+                            <!--  -->
+                            <div class="sub_location_time">
+                                <div>
+                                    <label>Until</label> 
+                                    <input type="datetime-local" name="to">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="additional_filter">
+
+                            <div class="additional_filter_sub">
+                                
+                                <label for="categories">Category</label>
+                                
+                                <select name="categories" id="categories">
+                                  <option value="">Category</option>
+                                  <option value="van">Van</option>
+                                  <option value="minivan">Minivan</option>
+                                  <option value="suv">Suv</option>
+                                  <option value="motorcycle">Motorcycle</option>
+                                  <option value="sedan">Sedan</option>
+                                  <option value="coupe">Coupe</option>
+                                  <option value="cabriolet">Cabriolet</option>
+                                  <option value="sport">Sport</option>
+                                  <option value="retro">Retro</option>
+                                  <option value="luxury">Luxury</option>
+                                </select>
+
+                            </div>               
+            
+                            <div class="additional_filter_sub">
+                                
+                                <label for="manufacturer">Manufacturer</label>
+                                
+                                <select name="manufacturer" id="manufacturer">
+                                  <option value="">Manufacturer</option>
+                                  <option value="mercedes-benz">Mercedes-Benz</option>
+                                  <option value="bmw">BMW</option>
+                                  <option value="ford">Fore</option>
+                                  <option value="nissan">Nissan</option>
+                                  <option value="opel">Opel</option>
+                                  <option value="toyota">Toyota</option>
+                                  <option value="honda">Honda</option>
+                                  <option value="hyundai">Hyundai</option>
+                                  <option value="kia">Kia</option>
+                                  <option value="mazda">Mazda</option>
+                                  <option value="renault">Renault</option>
+                                  <option value="peugeot">Peugeot</option>
+                                  <option value="skoda">Skoda</option>
+                                  <option value="r&r">R&R</option>
+                                  <option value="ferrari">Ferrari</option>
+                                  <option value="lamborgini">Lamborgini</option>
+                                  <option value="aston martin">Aston Martin</option>
+                                  <option value="maserati">Maserati</option>
+                                  <option value="bentley">Bentley</option>
+                                  <option value="porche">Porche</option>
+                                  <option value="yamaha">Yamaha</option>
+                                  <option value="ducati">Ducati</option>
+                                </select>
+
+                            </div>  
+
+                            <div class="additional_filter_sub">
+                                
+                                <label for="models">Model</label>
+                                
+                                <select name="models" id="models">
+                                  <option value="">Model</option>
+                                  <option value="somethong">Something</option>
+                                </select>
+
+                            </div>         
+
+                        </div>
+
+                        <div class="additional_filter">
+                            
+                            <div class="additional_filter_sub">
+                                <div>
+                                    <label>Price</label> 
+                                    <input type="number" name="p_from" placeholder="Price - from">
+                                    <input type="number" name="p_to" placeholder="- to">
+                                </div>
+                            </div>
+
+                            <div class="additional_filter_sub">
+                                <div>
+                                    <label>Year</label> 
+                                    <input type="number" name="y_from" placeholder="Year - from">
+                                    <input type="number" name="y_to" placeholder="- to">
+                                </div>
+                            </div>
+
+                            <div class="additional_filter_sub">
+                                 
+                                <label for="engine_from">Engine</label>
+                                
+                                <select name="engine_from" id="engine_from" style="width:170px;">
+                                
+                                    <option value="">Engine - from</option><option value="100">0.1</option><option value="200">0.2</option><option value="300">0.3</option><option value="400">0.4</option><option value="500">0.5</option><option value="600">0.6</option><option value="700">0.7</option><option value="800">0.8</option><option value="900">0.9</option><option value="1000">1.0</option><option value="1100">1.1</option><option value="1200">1.2</option><option value="1300">1.3</option><option value="1400">1.4</option><option value="1500">1.5</option><option value="1600">1.6</option><option value="1700">1.7</option><option value="1800">1.8</option><option value="1900">1.9</option><option value="2000">2.0</option><option value="2100">2.1</option><option value="2200">2.2</option><option value="2300">2.3</option><option value="2400">2.4</option><option value="2500">2.5</option><option value="2600">2.6</option><option value="2700">2.7</option><option value="2800">2.8</option><option value="2900">2.9</option><option value="3000">3.0</option><option value="3100">3.1</option><option value="3200">3.2</option><option value="3300">3.3</option><option value="3400">3.4</option><option value="3500">3.5</option><option value="3600">3.6</option><option value="3700">3.7</option><option value="3800">3.8</option><option value="3900">3.9</option><option value="4000">4.0</option><option value="4100">4.1</option><option value="4200">4.2</option><option value="4300">4.3</option><option value="4400">4.4</option><option value="4500">4.5</option><option value="4600">4.6</option><option value="4700">4.7</option><option value="4800">4.8</option><option value="4900">4.9</option><option value="5000">5.0</option><option value="5100">5.1</option><option value="5200">5.2</option><option value="5300">5.3</option><option value="5400">5.4</option><option value="5500">5.5</option><option value="5600">5.6</option><option value="5700">5.7</option><option value="5800">5.8</option><option value="5900">5.9</option><option value="6000">6.0</option><option value="6100">6.1</option><option value="6200">6.2</option><option value="6300">6.3</option><option value="6400">6.4</option><option value="6500">6.5</option><option value="6600">6.6</option><option value="6700">6.7</option><option value="6800">6.8</option><option value="6900">6.9</option><option value="7000">7.0</option><option value="7100">7.1</option><option value="7200">7.2</option><option value="7300">7.3</option><option value="7400">7.4</option><option value="7500">7.5</option><option value="7600">7.6</option><option value="7700">7.7</option><option value="7800">7.8</option><option value="7900">7.9</option><option value="8000">8.0</option><option value="8100">8.1</option><option value="8200">8.2</option><option value="8300">8.3</option><option value="8400">8.4</option><option value="8500">8.5</option><option value="8600">8.6</option><option value="8700">8.7</option><option value="8800">8.8</option><option value="8900">8.9</option><option value="9000">9.0</option><option value="9100">9.1</option><option value="9200">9.2</option><option value="9300">9.3</option><option value="9400">9.4</option><option value="9500">9.5</option><option value="9600">9.6</option><option value="9700">9.7</option><option value="9800">9.8</option><option value="9900">9.9</option><option value="10000">10.0</option><option value="10100">10.1</option><option value="10200">10.2</option><option value="10300">10.3</option><option value="10400">10.4</option><option value="10500">10.5</option><option value="10600">10.6</option><option value="10700">10.7</option><option value="10800">10.8</option><option value="10900">10.9</option><option value="11000">11.0</option><option value="11100">11.1</option><option value="11200">11.2</option><option value="11300">11.3</option><option value="11400">11.4</option><option value="11500">11.5</option><option value="11600">11.6</option><option value="11700">11.7</option><option value="11800">11.8</option><option value="11900">11.9</option><option value="12000">12.0</option><option value="12100">12.1</option><option value="12200">12.2</option><option value="12300">12.3</option><option value="12400">12.4</option><option value="12500">12.5</option><option value="12600">12.6</option><option value="12700">12.7</option><option value="12800">12.8</option><option value="12900">12.9</option><option value="13000">13.0</option>
+                                
+                                </select>
+
+                                <select name="engine_to" id="engine_to" style="width:170px;">
+                                 
+                                    <option value="">-to</option><option value="100">0.1</option><option value="200">0.2</option><option value="300">0.3</option><option value="400">0.4</option><option value="500">0.5</option><option value="600">0.6</option><option value="700">0.7</option><option value="800">0.8</option><option value="900">0.9</option><option value="1000">1.0</option><option value="1100">1.1</option><option value="1200">1.2</option><option value="1300">1.3</option><option value="1400">1.4</option><option value="1500">1.5</option><option value="1600">1.6</option><option value="1700">1.7</option><option value="1800">1.8</option><option value="1900">1.9</option><option value="2000">2.0</option><option value="2100">2.1</option><option value="2200">2.2</option><option value="2300">2.3</option><option value="2400">2.4</option><option value="2500">2.5</option><option value="2600">2.6</option><option value="2700">2.7</option><option value="2800">2.8</option><option value="2900">2.9</option><option value="3000">3.0</option><option value="3100">3.1</option><option value="3200">3.2</option><option value="3300">3.3</option><option value="3400">3.4</option><option value="3500">3.5</option><option value="3600">3.6</option><option value="3700">3.7</option><option value="3800">3.8</option><option value="3900">3.9</option><option value="4000">4.0</option><option value="4100">4.1</option><option value="4200">4.2</option><option value="4300">4.3</option><option value="4400">4.4</option><option value="4500">4.5</option><option value="4600">4.6</option><option value="4700">4.7</option><option value="4800">4.8</option><option value="4900">4.9</option><option value="5000">5.0</option><option value="5100">5.1</option><option value="5200">5.2</option><option value="5300">5.3</option><option value="5400">5.4</option><option value="5500">5.5</option><option value="5600">5.6</option><option value="5700">5.7</option><option value="5800">5.8</option><option value="5900">5.9</option><option value="6000">6.0</option><option value="6100">6.1</option><option value="6200">6.2</option><option value="6300">6.3</option><option value="6400">6.4</option><option value="6500">6.5</option><option value="6600">6.6</option><option value="6700">6.7</option><option value="6800">6.8</option><option value="6900">6.9</option><option value="7000">7.0</option><option value="7100">7.1</option><option value="7200">7.2</option><option value="7300">7.3</option><option value="7400">7.4</option><option value="7500">7.5</option><option value="7600">7.6</option><option value="7700">7.7</option><option value="7800">7.8</option><option value="7900">7.9</option><option value="8000">8.0</option><option value="8100">8.1</option><option value="8200">8.2</option><option value="8300">8.3</option><option value="8400">8.4</option><option value="8500">8.5</option><option value="8600">8.6</option><option value="8700">8.7</option><option value="8800">8.8</option><option value="8900">8.9</option><option value="9000">9.0</option><option value="9100">9.1</option><option value="9200">9.2</option><option value="9300">9.3</option><option value="9400">9.4</option><option value="9500">9.5</option><option value="9600">9.6</option><option value="9700">9.7</option><option value="9800">9.8</option><option value="9900">9.9</option><option value="10000">10.0</option><option value="10100">10.1</option><option value="10200">10.2</option><option value="10300">10.3</option><option value="10400">10.4</option><option value="10500">10.5</option><option value="10600">10.6</option><option value="10700">10.7</option><option value="10800">10.8</option><option value="10900">10.9</option><option value="11000">11.0</option><option value="11100">11.1</option><option value="11200">11.2</option><option value="11300">11.3</option><option value="11400">11.4</option><option value="11500">11.5</option><option value="11600">11.6</option><option value="11700">11.7</option><option value="11800">11.8</option><option value="11900">11.9</option><option value="12000">12.0</option><option value="12100">12.1</option><option value="12200">12.2</option><option value="12300">12.3</option><option value="12400">12.4</option><option value="12500">12.5</option><option value="12600">12.6</option><option value="12700">12.7</option><option value="12800">12.8</option><option value="12900">12.9</option><option value="13000">13.0</option>
+                                
+                                </select>
+
+                            </div>  
+
+                        </div>
+
+                        <div class="additional_filter">
+
+                            <div class="additional_filter_sub">
+                                
+                                <label for="transmission_filtr">Transmission</label>
+                                
+                                <select name="transmission_filtr" id="transmission_filtr">
+                                  <option value="">Transmission</option>
+                                  <option value="manual">Manual</option>
+                                  <option value="automatic">Automatic</option>
+                                  <option value="tiptronic">Tiptronic</option>
+                                  <option value="variator">Variator</option>
+                                </select>
+
+                            </div>    
+
+                            <div class="additional_filter_sub">
+                                
+                                <label for="fuel_filtr">Fuel</label>
+                                
+                                <select name="fuel_filtr" id="fuel_filtr">
+                                  <option value="">Fuel</option>
+                                  <option value="petrol">Petrol</option>
+                                  <option value="gas&petrol">Gas & Petrol</option>
+                                  <option value="diesel">Diesel</option>
+                                  <option value="electric">Electric</option>
+                                  <option value="hybrid">Hybrid</option>
+                                </select>
+
+                            </div>    
+
+                             <div class="additional_filter_sub">
+                                
+                                <label for="helm_filtr">Helm</label>
+                                
+                                <select name="helm_filtr" id="helm_filtr">
+                                  <option value="">Helm</option>
+                                  <option value="left">Left</option>
+                                  <option value="right">Right</option>
+                                </select>
+
+                            </div>        
+
+                            <div class="additional_filter_sub">
+                                
+                                <label for="sealts_filtr">Seats</label>
+                                
+                                <select name="sealts_filtr" id="sealts_filtr">
+                                  <option value="">Seats</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                  <option value="6">6</option>
+                                  <option value="7">7</option>
+                                  <option value="8">8</option>
+                                  <option value="9">9</option>
+                                  <option value="10">10</option>
+                                  <option value="11">11</option>
+                                  <option value="12">12</option>
+                                  <option value="13">13</option>
+                                  <option value="14">14</option>
+                                  <option value="15">15</option>
+                                  <option value="16">16</option>
+                                  <option value="17">17</option>
+                                  <option value="18">18</option>
+                                  <option value="19">19</option>
+                                  <option value="20">20</option>
+                                  <option value="21">21</option>
+                                  <option value="22">22</option>
+                                  <option value="23">23</option>
+                                  <option value="24">24</option>
+                                  <option value="25">25</option>
+                                  <option value="26">26</option>
+                                  <option value="27">27</option>
+                                  <option value="28">28</option>
+                                  <option value="29">29</option>
+                                  <option value="30">30</option>
+                                </select>
+
+                            </div> 
+
+                            <div class="additional_filter_sub">
+                                
+                                <div>
+                                    <label>Color</label> 
+                                    <input type="text" id="color_filtr" placeholder="Color">
+                                </div>
+
+                            </div>   
+
+                        </div>
+                        
+                        <button class="car_search_butt button" id="search_car" >Search</button>
+
+                    </div>
+
+                </div>
+
+            </div>
 
             <div class="cars">
 

@@ -572,6 +572,14 @@ h2.slogan{
 	justify-content: center;
 }
 
+.footer_style h3{
+	color: #1F1F1F;
+}
+
+.footer_style a{
+	color: #413D3D;
+}
+
 .footer_ul{
 	list-style-type:none;
 	padding-left: 5px;
@@ -614,6 +622,7 @@ h2.slogan{
 	font-size: 15px;
 	font-weight: bold;
 	text-decoration: none;
+	color: #413D3D;
 }
 
 .f_text{
