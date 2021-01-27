@@ -131,6 +131,14 @@
 
 }
 
+
+.additional_filter_sub div{
+
+	display: flex;
+	align-items: center;	
+
+}
+
 .additional_filter_sub select{
 
 	margin-left: 10px;
@@ -147,6 +155,7 @@
 	border: none;
 	border-radius: 10px;
 	padding: 0px 10px 0px 10px;
+	margin-left: 10px;
 	height: 30px;
 
 }
@@ -284,6 +293,24 @@
 
 /*responsive*/
 
+@media screen and (max-width: 1350px) {
+
+	.additional_filter{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.additional_filter_sub label{
+		display: none;
+	}
+
+	.additional_filter_sub{
+		width: 100%;
+		height: 50px;
+	}
+
+}
+
 @media screen and (max-width: 1300px) {
 
 	.car_box{
@@ -292,6 +319,26 @@
 
 	.sub_box{
 		width: 60%;
+	}
+
+	.location_time{
+		width: 98%;
+	}
+
+}
+
+@media screen and (max-width: 1120px) {
+
+	.sub_location_time input{
+		width: 250px;
+	}
+
+}
+
+@media screen and (max-width: 1000px) {
+
+	.sub_location_time input{
+		width: 200px;
 	}
 
 }
@@ -304,6 +351,19 @@
 
 }
 
+@media screen and (max-width: 850px) {
+
+	.location_time{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.sub_location_time input{
+		width: 400px;
+		height: 40px;
+	}
+
+}
 
 @media screen and (max-width: 800px) {
 
@@ -368,6 +428,22 @@
 		font-size: 140%;
 	}
 
+	.sub_location_time input{
+		width: 350px;
+	}
+
+}
+
+@media screen and (max-width: 450px) {
+
+	.sub_location_time input{
+		width: 300px;
+	}
+
+	.additional_filter_sub input, select{
+		width: 140px !important;
+	}
+
 }
 
 @media screen and (max-width: 400px) {
@@ -378,6 +454,17 @@
 
 }
 
+@media screen and (max-width: 350px) {
+
+	.sub_location_time input{
+		width: 200px;
+	}
+
+	.additional_filter_sub input, select{
+		width: 100px !important;
+	}
+
+}
 
 @media screen and (max-width: 300px) {
 
