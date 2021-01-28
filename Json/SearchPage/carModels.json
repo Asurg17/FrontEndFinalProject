@@ -1,0 +1,59 @@
+[
+
+  {
+    "id": 1,
+    "manufacturer": "Mercedes-Benz",
+    "models": ["E class", "C class", "B class", "A class", "S class", "CLK", "CLS", "GL"]
+  },
+  {
+    "id": 2,
+    "manufacturer": "BMW",
+    "models": ["X1", "X3", "X5", "X6", "X7", "i3", "5 Series (F07/F10/F11)",  "5 Series (G30/G31)", "6 Series (F06/F12/F13)"]
+  },
+  {
+    "id": 3,
+    "manufacturer": "Ford",
+    "models": ["Edge", "EcoSport", "Escape", "Explorer", "Expedition", "F-150", "Fiesta", "Focus", "Mondeo", "Galaxy", "Transit Custom"]
+  },
+  {
+    "id": 4,
+    "manufacturer": "Nissan",
+    "models": ["Leaf", "Micra", "Note", "Tiida", "Qashqai", "Elgrand", "GT-R", "Navara"]
+  },
+  {
+    "id": 5,
+    "manufacturer": "Opel",
+    "models": ["Adam", "Corsa", "Tigra", "Astra", "Vectra", "Omega"]
+  },
+  {
+    "id": 6,
+    "manufacturer": "Toyota",
+    "models": ["Century", "Camry", "Prius", "Corolla", "Aqua", "Supra", "Land Cruiser", "Hilux", "RAV4", "Noah", "Voxy"]
+   },
+  {
+    "id": 7,
+    "manufacturer": "Honda",
+    "models": ["Civic", "Accord", "Clarity", "Legend", "Odyssey", "Breeze", "CR-V"]
+  },
+  {
+    "id": 8,
+    "manufacturer": "R&R",
+    "models": ["Phantom", "Silver Seraph", "Camargue", "Silver Spur", "Silver Shadow"]
+  },
+  {
+    "id": 9,
+    "manufacturer": "Porsche",
+    "models": ["Cayman", "Boxster", "Spyder", "Carrera", "Taycan", "Panamera", "Cayenne", "Macan"]
+  },
+  {
+    "id": 10,
+    "manufacturer": "Yamaha",
+    "models": ["YZF-R7", "V-MAX", "XT-500", "YZR-500", "YZF-1000 R1"]
+  },
+  {
+    "id": 11,
+    "manufacturer": "Ducati",
+    "models": ["916 SBK", "999", "1098 S", "1198S", "Multistrada 1200"]
+  }
+  
+]
