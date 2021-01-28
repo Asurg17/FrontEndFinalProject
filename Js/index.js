@@ -12,11 +12,11 @@ function checkWindowSize(){
 		
 		maxSize = 5;
 		
-		document.getElementById("sport").style.display="none";
+		document.getElementById("cabriolet").style.display="none";
 
 	}else{
 
-		document.getElementById("sport").style.display="flex";
+		document.getElementById("cabriolet").style.display="flex";
 
 	}
 
@@ -26,11 +26,11 @@ function checkWindowSize(){
 		
 		maxSize = 4;
 
-		document.getElementById("retro").style.display="none";
+		document.getElementById("coupe").style.display="none";
 
 	}else{
 
-		document.getElementById("retro").style.display="flex";
+		document.getElementById("coupe").style.display="flex";
 
 	}
 
@@ -40,11 +40,11 @@ function checkWindowSize(){
 		
 		maxSize = 3;
 
-		document.getElementById("car").style.display="none";
+		document.getElementById("sedan").style.display="none";
 
 	}else{
 
-		document.getElementById("car").style.display="flex";
+		document.getElementById("sedan").style.display="flex";
 
 	}
 
