@@ -1,4 +1,55 @@
 
+// ---------------------------------------------------------------
+
+window.onload = function(){
+
+	// checkWindowSize();
+
+	document.getElementById("log_in").addEventListener("click", redirectToUserPage);
+
+}
+
+
+function redirectToUserPage(){
+
+	fetch('../Json/users.json')
+		.then(response => response.json())
+		.then((result) => {redirect(result)});
+
+}
+
+function redirect(data){
+
+	alert("here i am");
+
+	var username = document.getElementById("l_username").value;
+	var password = document.getElementById("l_password").value;
+	
+	var errorCode = 0;
+	var index = 0;
+
+	alert("here i am");
+
+	while(true){
+
+		if(index == data.length){
+			errorCode = -999;
+			break;
+		}
+
+		if(data[index].username == username && data[index].password == password){
+			
+			alert("found");
+			break;
+		}
+
+		index ++;
+
+	}
+
+
+}
+
 
 // ---------------------------------------
 let maxSize = 6;

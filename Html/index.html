@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=0.9">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     </head>
-    <body onload="checkWindowSize()">
+    <body> <!-- onload="checkWindowSize()"> -->
 
         <!-- ################################################################################################################ -->
         <!-- header part -->
@@ -59,17 +59,17 @@
                 <div class="popup_label">Log in</div>
 
                 <div class="popup_elem">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" required>
+                    <label for="l_username">Username</label>
+                    <input type="text" id="l_username" required>
                 </div>
 
                 <div class="popup_elem">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" required>
+                    <label for="l_password">Password</label>
+                    <input type="password" id="l_password" required>
                 </div>
 
                 <div class="popup_elem">
-                    <input type="submit" value="Log In" class="submit">
+                    <input type="submit" id="log_in" value="Log In" class="submit">
                 </div>
 
             </form>
@@ -104,6 +104,16 @@
                 <div class="popup_elem">
                     <label for="username">Username</label>
                     <input type="text" id="username" required>
+                </div>
+
+                <div class="popup_elem">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" required>
+                </div>
+
+                 <div class="popup_elem">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" required>
                 </div>
 
                 <div class="popup_elem">

@@ -1,0 +1,21 @@
+[
+	{
+	  "id": 1,
+	  "car_name": "",
+	  "manufacturer": "",
+	  "model": "",
+	  "model_year": "",
+	  "category": "",
+	  "engine": "",
+	  "transmission": "",
+	  "helm": "",
+	  "fuel": "",
+	  "color": "",
+	  "seats": "",
+	  "price": "",
+	  "pictures": "",
+	  "car_description": "",
+	  "owner_id": ""
+	}
+
+]
