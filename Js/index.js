@@ -3,9 +3,10 @@
 
 window.onload = function(){
 
-	// checkWindowSize();
+	checkWindowSize();
 
 	document.getElementById("log_in").addEventListener("click", redirectToUserPage);
+	document.getElementById("sign_up").addEventListener("click", getUserJson);
 
 }
 
@@ -20,15 +21,11 @@ function redirectToUserPage(){
 
 function redirect(data){
 
-	alert("here i am");
-
 	var username = document.getElementById("l_username").value;
 	var password = document.getElementById("l_password").value;
 	
 	var errorCode = 0;
 	var index = 0;
-
-	alert("here i am");
 
 	while(true){
 
@@ -37,17 +34,88 @@ function redirect(data){
 			break;
 		}
 
-		if(data[index].username == username && data[index].password == password){
+		if(data[index].username == username){
 			
-			alert("found");
-			break;
+
+			if(data[index].password == password){
+
+				var id = index;
+
+				window.location.href = "../Html/userPage.html?id=" + encodeURIComponent(id);
+
+				break;
+
+			}else{
+
+				errorCode = -998
+
+				break;
+
+			}
+		
 		}
 
 		index ++;
 
 	}
 
+	if(errorCode == -999){
+		alert("Such Username Was Not Found!");
+	}else if(errorCode == -998){
+		alert("Password Is Incorrect!")
+	}
 
+
+}
+
+
+// ------------------------------------------------------
+
+function getUserJson(){
+
+	fetch('../Json/usr.json')
+		.then(response => response.json())
+		.then((result) => {addNewUser(result)});
+
+
+}
+
+function addNewUser(data){
+
+	var first_name = document.getElementById("s_firstName").value;
+	var last_name = document.getElementById("s_lastName").value;
+	var email = document.getElementById("s_email").value;
+	var username = document.getElementById("s_username").value;
+	var phone = document.getElementById("s_phone").value;
+	var location = document.getElementById("s_location").value;
+	var password = document.getElementById("s_password").value;
+	var conf_password = document.getElementById("s_confirm_password").value;
+
+	// const fs = require('fs')
+
+	// let dt = "Learning how to write in a file."
+
+	// fs.writeFile('../Json/zd.txt', dt, (err) => {
+	// 	if (err) throw err; 
+	// }) 
+	
+	// alert(data[6]);
+
+	// data[data.length + 1] = {
+	// 						    id: '1',
+	// 							first_name: 'Mike',
+	// 							last_name: 'Jhonsos',
+	// 							email: 'mike76i@gmail.com',
+	// 							username: 'jmike',
+	// 							password: 'mike123',
+	// 							location: 'Batumi',
+	// 							phone: '598947568',
+	// 							raiting: '5.0',
+	// 							adverts: '0'
+	// 						};
+
+	// alert(data[6]);
+	
 }
 
 
