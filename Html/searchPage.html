@@ -23,11 +23,10 @@
             <div class="nav">
 
                 <div class="search_box" style="margin-right: 5%;">
-                    <input class="srch_txt" type="text" placeholder="Type here to search" name="">
-                    <a class="srch" href="..\Html\searchPage.html">
+                    <input class="srch_txt" type="text" placeholder="Type here to search" id="ss_srch_text">
+                    <div class="srch" id="ss_search">
                         <i class="fas fa-search"></i>
-                    </a>
-
+                    </div>
                 </div>
 
             </div>
@@ -54,7 +53,7 @@
                             <div class="sub_location_time">
                                 <div>
                                     <label>Where</label> 
-                                    <input type="text" name="location" placeholder="Location">
+                                    <input type="text" id="f_location" placeholder="Location">
                                 </div>
                             </div>
 
@@ -62,7 +61,7 @@
                             <div class="sub_location_time">
                                 <div>
                                     <label>From</label> 
-                                    <input type="datetime-local" name="from">
+                                    <input type="date" id="f_from">
                                 </div>
                             </div>
 
@@ -70,7 +69,7 @@
                             <div class="sub_location_time">
                                 <div>
                                     <label>Until</label> 
-                                    <input type="datetime-local" name="to">
+                                    <input type="date" id="f_to">
                                 </div>
                             </div>
 
@@ -207,7 +206,7 @@
 
             <div class="cars">
 
-                <div class="car_box">
+                <div class="car_box" id="1" style="display: none;">
 
                     <div class="sub_box">
     
@@ -216,40 +215,413 @@
                         <div class="car_description">
 
                             <div class="car_name">
-                                <h3>Porche Murcielago</h3>
+                                <h3 id="1_car_name">Porche Murcielago</h3>
                             </div>
 
                             <div class="main_description">
 
+                                <p style="display: none;" id="1_car_id"></p>
+
                                 <div>
                                     <i class="fas fa-calendar-alt"> </i>
-                                    <p class="description_label"> Model Year: 2017 </p>
+                                    <p class="description_label" id="1_model_year"> Model Year: 2017 </p>
                                 </div>
 
                                 <div> 
                                     <i class="fas fa-car"></i>
-                                    <p class="description_label"> Engine: 4.5l </p>
+                                    <p class="description_label" id="1_engine"> Engine: 4.5l </p>
                                 </div>
 
                                 <div>
                                     <i class="fas fa-cogs"></i>
-                                    <p class="description_label"> Transmission: MC </p>
+                                    <p class="description_label" id="1_transmission"> Transmission: MC </p>
                                 </div>
 
                                 <div>
                                     <i class="fas fa-arrows-alt-h"></i>
-                                    <p class="description_label"> Helm: L </p>
+                                    <p class="description_label" id="1_helm"> Helm: L </p>
                                 </div>
 
                                 <div>
                                     <i class="fas fa-dollar-sign"></i>
-                                    <p class="description_label"> Price: 30$/day </p>
+                                    <p class="description_label" id="1_price"> Price: 30$/day </p>
                                 </div>
 
                             </div>
 
                             <div class="rating_div">
-                                <i class="fas fa-star"> 5.0 </i>
+                                <i class="fas fa-star" id="1_raiting"> 5.0 </i>
+                            </div>
+
+                        </div>   
+
+                    </div>
+
+                </div>
+
+                <div class="car_box" id="2" style="display: none;">
+
+                    <div class="sub_box">
+    
+                        <img class="sub_box_img" src="..\Asserts\sport.jpg">
+
+                        <div class="car_description">
+
+                            <div class="car_name">
+                                <h3 id="2_car_name">Porche Murcielago</h3>
+                            </div>
+
+                            <div class="main_description">
+
+                                <p style="display: none;" id="2_car_id"></p>
+
+                                <div>
+                                    <i class="fas fa-calendar-alt"> </i>
+                                    <p class="description_label" id="2_model_year"> Model Year: 2017 </p>
+                                </div>
+
+                                <div> 
+                                    <i class="fas fa-car"></i>
+                                    <p class="description_label" id="2_engine"> Engine: 4.5l </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-cogs"></i>
+                                    <p class="description_label" id="2_transmission"> Transmission: MC </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-arrows-alt-h"></i>
+                                    <p class="description_label" id="2_helm"> Helm: L </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <p class="description_label" id="2_price"> Price: 30$/day </p>
+                                </div>
+
+                            </div>
+
+                            <div class="rating_div">
+                                <i class="fas fa-star" id="2_raiting"> 5.0 </i>
+                            </div>
+
+                        </div>   
+
+                    </div>
+
+                </div>
+
+                <div class="car_box" id="3" style="display: none;">
+
+                    <div class="sub_box">
+    
+                        <img class="sub_box_img" src="..\Asserts\sport.jpg">
+
+                        <div class="car_description">
+
+                            <div class="car_name">
+                                <h3 id="3_car_name">Porche Murcielago</h3>
+                            </div>
+
+                            <div class="main_description">
+
+                                <p style="display: none;" id="3_car_id"></p>
+
+                                <div>
+                                    <i class="fas fa-calendar-alt"> </i>
+                                    <p class="description_label" id="3_model_year"> Model Year: 2017 </p>
+                                </div>
+
+                                <div> 
+                                    <i class="fas fa-car"></i>
+                                    <p class="description_label" id="3_engine"> Engine: 4.5l </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-cogs"></i>
+                                    <p class="description_label" id="3_transmission"> Transmission: MC </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-arrows-alt-h"></i>
+                                    <p class="description_label" id="3_helm"> Helm: L </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <p class="description_label" id="3_price"> Price: 30$/day </p>
+                                </div>
+
+                            </div>
+
+                            <div class="rating_div">
+                                <i class="fas fa-star" id="3_raiting"> 5.0 </i>
+                            </div>
+
+                        </div>   
+
+                    </div>
+
+                </div>
+
+                <div class="car_box" id="4" style="display: none;">
+
+                    <div class="sub_box">
+    
+                        <img class="sub_box_img" src="..\Asserts\sport.jpg">
+
+                        <div class="car_description">
+
+                            <div class="car_name">
+                                <h3 id="4_car_name">Porche Murcielago</h3>
+                            </div>
+
+                            <div class="main_description">
+
+                                <p style="display: none;" id="4_car_id"></p>
+
+                                <div>
+                                    <i class="fas fa-calendar-alt"> </i>
+                                    <p class="description_label" id="4_model_year"> Model Year: 2017 </p>
+                                </div>
+
+                                <div> 
+                                    <i class="fas fa-car"></i>
+                                    <p class="description_label" id="4_engine"> Engine: 4.5l </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-cogs"></i>
+                                    <p class="description_label" id="4_transmission"> Transmission: MC </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-arrows-alt-h"></i>
+                                    <p class="description_label" id="4_helm"> Helm: L </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <p class="description_label" id="4_price"> Price: 30$/day </p>
+                                </div>
+
+                            </div>
+
+                            <div class="rating_div">
+                                <i class="fas fa-star" id="4_raiting"> 5.0 </i>
+                            </div>
+
+                        </div>   
+
+                    </div>
+
+                </div>
+
+                <div class="car_box" id="5" style="display: none;">
+
+                    <div class="sub_box">
+    
+                        <img class="sub_box_img" src="..\Asserts\sport.jpg">
+
+                        <div class="car_description">
+
+                            <div class="car_name">
+                                <h3 id="5_car_name">Porche Murcielago</h3>
+                            </div>
+
+                            <div class="main_description">
+
+                                <p style="display: none;" id="5_car_id"></p>
+
+                                <div>
+                                    <i class="fas fa-calendar-alt"> </i>
+                                    <p class="description_label" id="5_model_year"> Model Year: 2017 </p>
+                                </div>
+
+                                <div> 
+                                    <i class="fas fa-car"></i>
+                                    <p class="description_label" id="5_engine"> Engine: 4.5l </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-cogs"></i>
+                                    <p class="description_label" id="5_transmission"> Transmission: MC </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-arrows-alt-h"></i>
+                                    <p class="description_label" id="5_helm"> Helm: L </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <p class="description_label" id="5_price"> Price: 30$/day </p>
+                                </div>
+
+                            </div>
+
+                            <div class="rating_div">
+                                <i class="fas fa-star" id="5_raiting"> 5.0 </i>
+                            </div>
+
+                        </div>   
+
+                    </div>
+
+                </div>
+
+                <div class="car_box" id="6" style="display: none;">
+
+                    <div class="sub_box">
+    
+                        <img class="sub_box_img" src="..\Asserts\sport.jpg">
+
+                        <div class="car_description">
+
+                            <div class="car_name">
+                                <h3 id="6_car_name">Porche Murcielago</h3>
+                            </div>
+
+                            <div class="main_description">
+
+                                <p style="display: none;" id="6_car_id"></p>
+
+                                <div>
+                                    <i class="fas fa-calendar-alt"> </i>
+                                    <p class="description_label" id="6_model_year"> Model Year: 2017 </p>
+                                </div>
+
+                                <div> 
+                                    <i class="fas fa-car"></i>
+                                    <p class="description_label" id="6_engine"> Engine: 4.5l </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-cogs"></i>
+                                    <p class="description_label" id="6_transmission"> Transmission: MC </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-arrows-alt-h"></i>
+                                    <p class="description_label" id="6_helm"> Helm: L </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <p class="description_label" id="6_price"> Price: 30$/day </p>
+                                </div>
+
+                            </div>
+
+                            <div class="rating_div">
+                                <i class="fas fa-star" id="6_raiting"> 5.0 </i>
+                            </div>
+
+                        </div>   
+
+                    </div>
+
+                </div>
+
+                <div class="car_box" id="7" style="display: none;">
+
+                    <div class="sub_box">
+    
+                        <img class="sub_box_img" src="..\Asserts\sport.jpg">
+
+                        <div class="car_description">
+
+                            <div class="car_name">
+                                <h3 id="7_car_name">Porche Murcielago</h3>
+                            </div>
+
+                            <div class="main_description">
+
+                                <p style="display: none;" id="7_car_id"></p>
+
+                                <div>
+                                    <i class="fas fa-calendar-alt"> </i>
+                                    <p class="description_label" id="7_model_year"> Model Year: 2017 </p>
+                                </div>
+
+                                <div> 
+                                    <i class="fas fa-car"></i>
+                                    <p class="description_label" id="7_engine"> Engine: 4.5l </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-cogs"></i>
+                                    <p class="description_label" id="7_transmission"> Transmission: MC </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-arrows-alt-h"></i>
+                                    <p class="description_label" id="7_helm"> Helm: L </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <p class="description_label" id="7_price"> Price: 30$/day </p>
+                                </div>
+
+                            </div>
+
+                            <div class="rating_div">
+                                <i class="fas fa-star" id="7_raiting"> 5.0 </i>
+                            </div>
+
+                        </div>   
+
+                    </div>
+
+                </div>
+       
+                <div class="car_box" id="8" style="display: none;">
+
+                    <div class="sub_box">
+    
+                        <img class="sub_box_img" src="..\Asserts\sport.jpg">
+
+                        <div class="car_description">
+
+                            <div class="car_name">
+                                <h3 id="8_car_name">Porche Murcielago</h3>
+                            </div>
+
+                            <div class="main_description">
+
+                                <p style="display: none;" id="8_car_id"></p>
+
+                                <div>
+                                    <i class="fas fa-calendar-alt"> </i>
+                                    <p class="description_label" id="8_model_year"> Model Year: 2017 </p>
+                                </div>
+
+                                <div> 
+                                    <i class="fas fa-car"></i>
+                                    <p class="description_label" id="8_engine"> Engine: 4.5l </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-cogs"></i>
+                                    <p class="description_label" id="8_transmission"> Transmission: MC </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-arrows-alt-h"></i>
+                                    <p class="description_label" id="8_helm"> Helm: L </p>
+                                </div>
+
+                                <div>
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <p class="description_label" id="8_price"> Price: 30$/day </p>
+                                </div>
+
+                            </div>
+
+                            <div class="rating_div">
+                                <i class="fas fa-star" id="8_raiting"> 5.0 </i>
                             </div>
 
                         </div>   
@@ -260,231 +632,241 @@
 
             </div>
 
+            <div class="page_nav">
+                
+                <div style="display:flex; align-items: center; width: 63px;">
+                   <div class="arrow_sub">
+                        <i class="arrow left" id="left_page"></i>
+                    </div>
+                </div>
+
+                <div>
+                    <p id="page_num">0</p>
+                </div>
+
+                <div style="display:flex; align-items: center; width: 63px;">
+                   <div class="arrow_sub">
+                        <i class="arrow right" id="right_page"></i>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
-        <!-- Filter -->
-
+        <!-- Footer -->
         <footer class="footer_style" style="background-color: white;">
-                    
-                <div class = "basic_statistic_info">
+                
+            <div class = "basic_statistic_info">
 
-                    <div class = "basic_statistic_info_sub">
+                <div class = "basic_statistic_info_sub">
 
-                        <h3>RCSS</h3>
+                    <h3>RCSS</h3>
 
-                        <ul class="footer_ul">
-                            
-                            <li>
-                                <a href="..\Html\InfoPage.html?About" class="f_text">About</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\InfoPage.html" class="f_text">Team</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\InfoPage.html" class="f_text">Vacancies</a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class = "basic_statistic_info_sub">
-
-                        <h3>Locations</h3>
-
-                        <ul class="footer_ul">
-                            
-                            <li>
-                                <a href="..\Html\index.html" class="f_text">Georgia</a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-                    
-                    <div class="basic_statistic_info_sub">
+                    <ul class="footer_ul">
                         
-                        <h3>Vehicle types</h3>
+                        <li>
+                            <a href="..\Html\InfoPage.html?About" class="f_text">About</a>
+                        </li>
 
-                        <ul class="footer_ul">
+                        <li>
+                            <a href="..\Html\InfoPage.html?Team" class="f_text">Team</a>
+                        </li>
 
-                            <li>
-                                <a href="..\Html\searchPage.html?Van" class="f_text">Van</a>
-                            </li>
+                        <li>
+                            <a href="..\Html\InfoPage.html?Vacancies"class="f_text">Vacancies</a>
+                        </li>
 
-                            <li>
-                                <a href="..\Html\searchPage.html?Minivan" class="f_text">Minivan</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Motorcycle" class="f_text">Motorcycle</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Car" class="f_text">Sedan</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Car" class="f_text">Coupe</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Car" class="f_text">Cabriolet</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Sport" class="f_text">Sport</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Retro" class="f_text">Retro</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Luxury" class="f_text">Luxury</a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="basic_statistic_info_sub">
-                        
-                        <h3>Models</h3>
-
-                        <ul class="footer_ul">
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Mercedes" class="f_text">Mercedes</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?BMW" class="f_text">BMW</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Ford" class="f_text">Ford</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Nissan" class="f_text">Nissan</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Opel" class="f_text">Opel</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Toyota" class="f_text">Toyota</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Honda" class="f_text">Honda</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?R&R" class="f_text">R&R</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Porche" class="f_text">Porche</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Yamaha" class="f_text">Yamaha</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Ducati" class="f_text">Ducati</a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="basic_statistic_info_sub">
-                        
-                        <h3>Top Cities</h3>
-
-                        <ul class="footer_ul">
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Tbilisi" class="f_text">Tbilisi</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Kutaisi" class="f_text">Kutaisi</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Batumi" class="f_text">Batumi</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Kobuleti" class="f_text">Kobuleti</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Gori" class="f_text">Gori</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Rustavi" class="f_text">Rustavi</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Zestafoni" class="f_text">Zestafoni</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Kazbegi" class="f_text">Kazbegi</a>
-                            </li>
-
-                            <li>
-                                <a href="..\Html\searchPage.html?Mestia" class="f_text">Mestia</a>
-                            </li>
-
-                        </ul>
-                    
-                    </div>
-
-                    <div class="social_network">
-
-                        <ul class="footer_ul">
-
-                            <li>
-                                
-                            </li>
-
-
-                        </ul>
-
-                    </div>
+                    </ul>
 
                 </div>
 
-                <div class="ls_footer">
-            
-                    <div class="ls_footer_sub">
-                        <p class="ls_f_text"> &copy; <script>document.write(new Date().getFullYear())</script> RCSS</p>
-                    </div>
+                <div class = "basic_statistic_info_sub">
 
-                    <div class="ls_footer_sub">
-                        <a href="..\Html\InfoPage.html?Terms">
-                          <p class=ls_f_text>Terms</p>
-                        </a>
-                    </div>
+                    <h3>Locations</h3>
 
-                    <div class="ls_footer_sub">
-                        <a href="..\Html\InfoPage.html?Privacy">
-                            <p class=ls_f_text>Privacy</p>
-                        </a>
-                    </div>
+                    <ul class="footer_ul">
+                        
+                        <li>
+                            <a href="..\Html\index.html" class="f_text">Georgia</a>
+                        </li>
+
+                    </ul>
 
                 </div>
                 
+                <div class="basic_statistic_info_sub">
+                    
+                    <h3>Categories</h3>
+
+                    <ul class="footer_ul">
+
+                        <li>
+                            <a href="..\Html\searchPage.html?category=Van" class="f_text">Van</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?category=Minivan" class="f_text">Minivan</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?category=Suv" class="f_text">Suv</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?category=Sedan" class="f_text">Sedan</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?category=Coupe" class="f_text">Coupe</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?category=Cabriolet" class="f_text">Cabriolet</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?category=Sport" class="f_text">Sport</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?category=Retro" class="f_text">Retro</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?category=Luxury" class="f_text">Luxury</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?category=Motorcycle" class="f_text">Motorcycle</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="basic_statistic_info_sub">
+                    
+                    <h3>Manufacturers</h3>
+
+                    <ul class="footer_ul">
+
+                        <li>
+                            <a href="..\Html\searchPage.html?manufacturer=Mercedes-Benz" class="f_text">Mercedes-Benz</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?manufacturer=BMW" class="f_text">BMW</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?manufacturer=Ford" class="f_text">Ford</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?manufacturer=Nissan" class="f_text">Nissan</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?manufacturer=Opel" class="f_text">Opel</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?manufacturer=Toyota" class="f_text">Toyota</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?manufacturer=Honda" class="f_text">Honda</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?manufacturer=R&R" class="f_text">R&R</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?manufacturer=Porsche" class="f_text">Porsche</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?manufacturer=Yamaha" class="f_text">Yamaha</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?manufacturer=Ducati" class="f_text">Ducati</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="basic_statistic_info_sub">
+                    
+                    <h3>Top Cities</h3>
+
+                    <ul class="footer_ul">
+
+                        <li>
+                            <a href="..\Html\searchPage.html?city=Tbilisi" class="f_text">Tbilisi</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?city=Kutaisi" class="f_text">Kutaisi</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?city=Batumi" class="f_text">Batumi</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?city=Kobuleti" class="f_text">Kobuleti</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?city=Gori" class="f_text">Gori</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?city=Rustavi" class="f_text">Rustavi</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?city=Zestafoni" class="f_text">Zestafoni</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?city=Kazbegi" class="f_text">Kazbegi</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\searchPage.html?city=Mestia" class="f_text">Mestia</a>
+                        </li>
+
+                    </ul>
+                
+                </div>
+
+            </div>
+
+            <div class="ls_footer">
+        
+                <div class="ls_footer_sub">
+                    <p class="ls_f_text"> &copy; <script>document.write(new Date().getFullYear())</script> RCSS</p>
+                </div>
+
+                <div class="ls_footer_sub">
+                    <a href="..\Html\InfoPage.html?Terms">
+                      <p class=ls_f_text>Terms</p>
+                    </a>
+                </div>
+
+                <div class="ls_footer_sub">
+                    <a href="..\Html\InfoPage.html?Privacy">
+                        <p class=ls_f_text>Privacy</p>
+                    </a>
+                </div>
+
+            </div>
+            
         </footer> 
 
     </body>

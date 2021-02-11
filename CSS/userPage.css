@@ -116,6 +116,15 @@
 
 }
 
+.username{
+
+	display: flex;
+	flex-direction: row; 
+	justify-content: center; 
+	align-items: center;"
+
+}
+
 .user_info{
 
 	width: 50%;

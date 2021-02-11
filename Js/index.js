@@ -1,15 +1,53 @@
 
+// ---------------------------------------------------------------\
+let maxSize;
+let num;
+
 // ---------------------------------------------------------------
+
+window.addEventListener("resize", checkWindowSize);
 
 window.onload = function(){
 
+	maxSize = 6;
+	num = 0;
+	
 	checkWindowSize();
+
+	document.getElementById("left_one").addEventListener("click", slideRight);
+	document.getElementById("right_one").addEventListener("click", slideLeft);
 
 	document.getElementById("log_in").addEventListener("click", redirectToUserPage);
 	document.getElementById("sign_up").addEventListener("click", getUserJson);
+	document.getElementById("search_the_car").addEventListener("click", searchTheCarByCarName);
+	document.getElementById("srch_butt").addEventListener("click", searchTheCarByLocationAndDate);
 
 }
 
+// --------------------
+
+function searchTheCarByCarName(){
+
+	var carName = document.getElementById("srch_txt").value;
+
+	window.location.href = "../Html/searchPage.html?carName=" + encodeURIComponent(carName);
+
+}
+
+function searchTheCarByLocationAndDate(){
+
+	var location = document.getElementById("c_location").value;
+	var from = document.getElementById("c_from").value;
+	var until = document.getElementById("c_until").value;
+
+	window.location.href = "../Html/searchPage.html?location=" + encodeURIComponent(location) +
+						   "&from=" + encodeURIComponent(from) + "&until=" + encodeURIComponent(until);
+
+}
+
+
+
+// ----------------------------------------------------------------
 
 function redirectToUserPage(){
 
@@ -73,10 +111,9 @@ function redirect(data){
 
 function getUserJson(){
 
-	fetch('../Json/usr.json')
+	fetch('../Json/users.json')
 		.then(response => response.json())
 		.then((result) => {addNewUser(result)});
-
 
 }
 
@@ -91,37 +128,36 @@ function addNewUser(data){
 	var password = document.getElementById("s_password").value;
 	var conf_password = document.getElementById("s_confirm_password").value;
 
-	// const fs = require('fs')
+	checkPassword(password, conf_password);
+	checkUser(username, data);
 
-	// let dt = "Learning how to write in a file."
+	// to be continued ...
+		
+}
 
-	// fs.writeFile('../Json/zd.txt', dt, (err) => {
-	// 	if (err) throw err; 
-	// }) 
-	
-	// alert(data[6]);
+// checks if password are same
+function checkPassword(password, conf_password){
+	if (password != conf_password) {
+		alert("Passwords are not same!");
+	}
+}
 
-	// data[data.length + 1] = {
-	// 						    id: '1',
-	// 							first_name: 'Mike',
-	// 							last_name: 'Jhonsos',
-	// 							email: 'mike76i@gmail.com',
-	// 							username: 'jmike',
-	// 							password: 'mike123',
-	// 							location: 'Batumi',
-	// 							phone: '598947568',
-	// 							raiting: '5.0',
-	// 							adverts: '0'
-	// 						};
+// checks if user with given username already exists
+function checkUser(username, data){
 
-	// alert(data[6]);
-	
+	for(var i=0; i<data.length; i++){
+
+		if(username == data[i].username){
+			alert("Username already exists!");
+			break;
+		}
+
+	}
+
 }
 
 
 // ---------------------------------------
-let maxSize = 6;
-let num = 0;
 
 function checkWindowSize(){
 
@@ -286,15 +322,3 @@ function closeEveryForm(){
 	document.body.classList.remove("showSignUpForm");
 }
 
-// --------------------------------------------------------------------------------------
-// var elems = document.body.getElementsByTagName("*");
-// for(i=0; i<elems.length; i++){
-// 	elems[i].style.display = "none";
-// }
-// --------------------------------------------------------------------------------------
-function search(){
-	window.location.href = "../Html/searchPage.html"
-}
-
-// Event listeners
-window.addEventListener("resize", checkWindowSize);

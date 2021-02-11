@@ -3,7 +3,7 @@
   {
     "id": 1,
     "manufacturer": "Mercedes-Benz",
-    "models": ["E class", "C class", "B class", "A class", "S class", "CLK", "CLS", "GL"]
+    "models": ["E class", "C class", "B class", "A class", "S class", "V class", "CLK", "CLS", "GL", "Maybach"]
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
   {
     "id": 3,
     "manufacturer": "Ford",
-    "models": ["Edge", "EcoSport", "Escape", "Explorer", "Expedition", "F-150", "Fiesta", "Focus", "Mondeo", "Galaxy", "Transit Custom"]
+    "models": ["Edge", "EcoSport", "Escape", "Explorer", "Expedition", "F-150", "Fiesta", "Focus", "Mondeo", "Galaxy", "Transit"]
   },
   {
     "id": 4,
@@ -53,7 +53,7 @@
   {
     "id": 11,
     "manufacturer": "Ducati",
-    "models": ["916 SBK", "999", "1098 S", "1198S", "Multistrada 1200"]
+    "models": ["916 SBK", "999", "1098 S", "1198S", "Multistrada 1200", "Monster"]
   }
   
 ]

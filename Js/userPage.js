@@ -42,12 +42,14 @@ function setUserInfo(data, id){
 
 	var curUser = data[id];
 
+	var username = curUser.username;
 	var whole_name = curUser.first_name + " " + curUser.last_name;
 	var contact = "(+995) " + curUser.phone;
 	var location = "Georgia, " + curUser.location;
 	var raiting = curUser.raiting;
 	var adverts = curUser.adverts;
 
+	document.getElementById("username").innerHTML = username;
 	document.getElementById("u_name").innerHTML = whole_name;
 	document.getElementById("u_contact").innerHTML = contact;
 	document.getElementById("u_location").innerHTML = location;

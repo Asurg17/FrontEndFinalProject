@@ -1,4 +1,21 @@
 
+// ----------------------------------------------------------------------------------------------------
+window.onload = function(){
+
+	document.getElementById("search_the_car").addEventListener("click", searchTheCarByCarName);
+
+}
+
+function searchTheCarByCarName(){
+
+	var carName = document.getElementById("srch_txt").value;
+
+	window.location.href = "../Html/searchPage.html?carName=" + encodeURIComponent(carName);
+
+}
+
+// --------------------------------------
+
 function changeH1Text(){
 
 	let url = window.location.href;

@@ -201,50 +201,6 @@ h2.slogan{
 
 /*Here goes css for car browse*/
 
-/*Arrows start*/
-
-.arrow {
-    border: solid grey;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 10px;
-}
-
-.arrow:hover{
-	border: solid #3A302E;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 10px;
-}
-
-.right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}
-
-.left {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-}
-
-.arrow_sub{
-	padding-right: 20px;
-	padding-left: 20px;
-}
-
-.arrow_sub i{
-	cursor: pointer;
-}
-
-.arrow:active{
-	border: solid #3A302E;
-	border-width: 0 3px 3px 0;
-    padding: 8px;
-}
-  
-
-/*Arrows end*/
-
 .browse{
 	display: flex; 
 	justify-content: center;
