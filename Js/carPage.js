@@ -16,11 +16,16 @@ window.onload = function(){
 
 	document.getElementById("search_the_car").addEventListener("click", searchTheCarByCarName);
 
+	document.getElementById("left").addEventListener("click", showPreviousPhoto);
+	document.getElementById("right").addEventListener("click", showNextPhoto);
+
 	loadCarData(info);
 
 }
 
 // - - - - - - - - - - - -  - - - - - - - - 
+var curCarInfo;
+var photoIndex = 0;
 
 function searchTheCarByCarName(){
 
@@ -40,7 +45,10 @@ function loadCarData(info){
 
 function displayCarInfo(data, carId){
 
-	var curCarInfo = data[carId-1];
+	curCarInfo = data[carId-1];
+
+	var firstPicrute = data[carId-1].pictures[0];
+	document.getElementById("car_img").src = firstPicrute;
 
 	document.getElementById("car_name").innerHTML = curCarInfo.car_name;
 	document.getElementById("manufacturer").innerHTML = "Manufacturer: " + curCarInfo.manufacturer;
@@ -72,5 +80,23 @@ function displayOwnerInfo(data, owner_id){
 	document.getElementById("contact").innerHTML = "Contact: (+995)" + curOwner.phone;
 	document.getElementById("location").innerHTML = "Location: " + curOwner.location;
 	document.getElementById("raiting").innerHTML = "Raiting: " + curOwner.raiting;
+
+}
+
+function showNextPhoto(){
+
+	if(photoIndex != curCarInfo.pictures.length-1){	
+		photoIndex += 1;
+		document.getElementById("car_img").src = curCarInfo.pictures[photoIndex];
+	}
+
+}
+
+function showPreviousPhoto(){
+
+	if(photoIndex != 0){
+		photoIndex -= 1;
+		document.getElementById("car_img").src = curCarInfo.pictures[photoIndex];
+	}
 
 }

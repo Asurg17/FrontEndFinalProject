@@ -620,8 +620,8 @@ function displayCars(data, info, flag){
 
 	// // // // // // // // // // // 
 
-	page = 0;
-	lastPage = 0;
+	// page = 0;
+	// lastPage = 0;
 
 	if(data.length != 0){
 		if(data.length % 8 == 0){
@@ -691,7 +691,9 @@ function showCurentCarPage(from, to){
 
 	for(var i=from; i<to; i++){
 
-		if(i == wholeData.length) break;
+		if(i == wholeData.length+1) break;
+
+		console.log(i);
 
 		document.getElementById(index + "").style.display = "flex";
 		document.getElementById(index + "_car_id").innerHTML = wholeData[i-1].id;
