@@ -47,8 +47,10 @@ function displayCarInfo(data, carId){
 
 	curCarInfo = data[carId-1];
 
-	var firstPicrute = data[carId-1].pictures[0];
-	document.getElementById("car_img").src = firstPicrute;
+	if(data[carId-1].pictures.length != 0){
+		var firstPicrute = data[carId-1].pictures[0];
+		document.getElementById("car_img").src = firstPicrute;
+	}
 
 	document.getElementById("car_name").innerHTML = curCarInfo.car_name;
 	document.getElementById("manufacturer").innerHTML = "Manufacturer: " + curCarInfo.manufacturer;
@@ -63,6 +65,7 @@ function displayCarInfo(data, carId){
 	document.getElementById("seats").innerHTML = "Seats: " + curCarInfo.seats;
 	document.getElementById("price").innerHTML = "Price: " + curCarInfo.price + "$/day";
 	document.getElementById("car_description").innerHTML = curCarInfo.car_description;
+	document.getElementById("location").innerHTML = "Location: " + curCarInfo.location;
 
 	fetch('../Json/users.json')
 		.then(response => response.json())
@@ -78,14 +81,13 @@ function displayOwnerInfo(data, owner_id){
 
 	document.getElementById("owner").innerHTML = "Owner name: " + curOwner.first_name;
 	document.getElementById("contact").innerHTML = "Contact: (+995)" + curOwner.phone;
-	document.getElementById("location").innerHTML = "Location: " + curOwner.location;
 	document.getElementById("raiting").innerHTML = "Raiting: " + curOwner.raiting;
 
 }
 
 function showNextPhoto(){
 
-	if(photoIndex != curCarInfo.pictures.length-1){	
+	if(photoIndex < curCarInfo.pictures.length-1){	
 		photoIndex += 1;
 		document.getElementById("car_img").src = curCarInfo.pictures[photoIndex];
 	}

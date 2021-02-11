@@ -694,8 +694,14 @@ function showCurentCarPage(from, to){
 		if(i == wholeData.length+1) break;
 
 		console.log(i);
-
 		document.getElementById(index + "").style.display = "flex";
+
+		if(wholeData[i-1].pictures.length != 0){
+			document.getElementById(index + "_car_img").src = wholeData[i-1].pictures[0];
+		}else{
+			document.getElementById(index + "_car_img").src = "..\\Asserts\\noimage.jpg";
+		}
+
 		document.getElementById(index + "_car_id").innerHTML = wholeData[i-1].id;
 		document.getElementById(index + "_car_name").innerHTML = wholeData[i-1].car_name;
 		document.getElementById(index + "_model_year").innerHTML = "Model year: " + wholeData[i-1].model_year;
