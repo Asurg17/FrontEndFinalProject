@@ -125,7 +125,7 @@
 
                 <div class="popup_elem">
                     <label for="car_id">Car Id</label>
-                    <input type="text" placeholder="Required*" id="car_id">
+                    <input type="number" placeholder="Required*" id="car_id">
                 </div>
 
                 <div class="popup_elem">
@@ -214,6 +214,40 @@
 
         </div>
 
+        <div class="add_car_busy_time_popup">
+            <div class="popup_close" onclick="closeBusyPopupForm()">&times;</div>
+            
+            <form class="form" id="f_add_car_busy_time">
+                
+                <div class="form_image">
+                    <img src="..\Asserts\logo.png">
+                </div>
+
+                <div class="popup_label"> Add Car Busy Time </div>
+
+                <div class="popup_elem">
+                    <label for="id_of_car">Car Id</label>
+                    <input type="number" placeholder="Required*" id="id_of_car">
+                </div>
+
+                <div class="popup_elem">
+                    <label for="busy_from">Busy From</label>
+                    <input type="date" placeholder="Required*" id="busy_from">
+                </div>
+
+                <div class="popup_elem">
+                    <label for="busy_to">Busy To</label>
+                    <input type="date" placeholder="Required*" id="busy_to">
+                </div>
+
+                <div class="popup_elem">
+                    <input value="Add Busy Time" class="submit" id="b_busy_time" onclick="closeBusyPopupForm()">
+                </div>
+
+            </form>
+
+        </div>
+
 
         <!-- User info -->
 
@@ -271,6 +305,8 @@
                 <button class="button" id="remove_car"> Remove Car </button>
                 <button class="button" id="cange_password"> Change Password </button>
                 <button class="button" id="change_pdata"> Change personal data </button>
+                <button class="button" id="add_car_busy_time"> Add Car Busy Time </button>
+                <button class="button" id="show_car_ids"> Show My Advert Ids </button>
 
             </div>
 
@@ -297,6 +333,10 @@
 
                         <li>
                             <a href="..\Html\InfoPage.html?Vacancies"class="f_text">Vacancies</a>
+                        </li>
+
+                        <li>
+                            <a href="..\Html\InfoPage.html?Contacts" class="f_text">Contacts</a>
                         </li>
 
                     </ul>

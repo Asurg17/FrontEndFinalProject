@@ -25,6 +25,8 @@ window.onload = function(){
 	document.getElementById("remove_car").addEventListener("click", openClosePopupForm);
 	document.getElementById("cange_password").addEventListener("click", openChPswPopupForm);
 	document.getElementById("change_pdata").addEventListener("click", openChPopupForm);
+	document.getElementById("add_car_busy_time").addEventListener("click", openBusyPopupForm);
+	document.getElementById("show_car_ids").addEventListener("click", showAdverIds);
 
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -32,6 +34,7 @@ window.onload = function(){
 	document.getElementById("b_remove_car").addEventListener("click", removeCar);
 	document.getElementById("b_change_password").addEventListener("click", changePassword);
 	document.getElementById("b_change_pdata").addEventListener("click", changePersonalData);
+	document.getElementById("b_busy_time").addEventListener("click", addBusyTime);
 
 }
 
@@ -110,10 +113,19 @@ function closeChPswPopupForm(){
 	document.body.classList.remove("showChPasswordForm");
 }
 
+function openBusyPopupForm(){
+	document.body.classList.add("showBusyForm");
+}
+
+function closeBusyPopupForm(){
+	document.body.classList.remove("showBusyForm");
+}
+
 function closeEveryForm(){
 	document.body.classList.remove("showAddCarForm");
 	document.body.classList.remove("showRemoveCarForm");
 	document.body.classList.remove("showChAddCarForm");
+	document.body.classList.remove("showBusyForm");
 	document.body.classList.remove("showChPasswordForm");
 }
 
@@ -172,7 +184,6 @@ function removeCar(){
 
 	document.getElementById("f_remove_car").reset();
 
-
 	if(carId != ""){
 		fetch('../Json/cars.json')
 			.then(response => response.json())
@@ -184,8 +195,6 @@ function removeCar(){
 }
 
 function remove(data, carId){
-
-	
 
 	if(data[carId-1] == null){
 		alert("Enter correct car id!");
@@ -229,7 +238,7 @@ function changePassword(){
 			alert("Password must be al least five characters long!");
 		}
 
-		
+
 		// change password in json
 
 	}
@@ -250,5 +259,59 @@ function changePersonalData(){
 	document.getElementById("f_personal_data").reset();
 
 	// add new personal data into json
+
+}
+
+// -- - -- - -- - -- - -- - -- - --
+
+function addBusyTime(){
+
+	var carId = document.getElementById("id_of_car").value;
+	var from = document.getElementById("busy_from").value;
+	var to = document.getElementById("busy_to").value;
+
+	if(carId == "" || from == "" || to == ""){
+		alert("Please fill all rows!");
+	}else if(from > to){
+		alert("From date can't be bigger that to date!");
+	}else{
+
+		// am manqanis naxva da bysy_from busy_to s update-i
+
+	}
+
+}
+
+
+// -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+function showAdverIds(){
+
+	fetch('../Json/cars.json')
+			.then(response => response.json())
+			.then((result) => {listIds(result)});
+
+}
+
+function listIds(data){
+
+	var cur_owner_id = curUser.id;
+
+	var ids = []
+
+	for(var i=0; i<data.length; i++){
+		if(data[i].owner_id == cur_owner_id){
+
+			var newElem = ["[ " + data[i].id + ": " + data[i].car_name + ", " + data[i].color + " ]"]
+			
+			ids.push(newElem);
+		
+		}
+	}
+
+	alert(ids);
+
+	console.log(ids);
+
 
 }

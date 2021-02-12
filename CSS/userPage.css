@@ -51,6 +51,19 @@
 	border-radius: 10px;
 }
 
+.add_car_busy_time_popup{
+	position: absolute;
+	display: none;
+	width: 30%;
+	transform:scale(1.15);
+	background-color: white;
+	z-index: 2;
+	opacity: 0;
+	box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+	transition: transform 300ms ease-in-out,opacity 300ms ease-in-out;
+	border-radius: 10px;
+}
+
 .showAddCarForm .popup_overlay {
     display:block;
 }
@@ -64,6 +77,10 @@
 }
 
 .showChPasswordForm .popup_overlay{
+	display:block;
+}
+
+.showBusyForm .popup_overlay{
 	display:block;
 }
 
@@ -89,6 +106,13 @@
 }
 
 .showChPasswordForm .change_password_popup{
+	display: block;
+	left:35%;
+	opacity:1;
+	transform: scale(1);
+}
+
+.showBusyForm .add_car_busy_time_popup{
 	display: block;
 	left:35%;
 	opacity:1;

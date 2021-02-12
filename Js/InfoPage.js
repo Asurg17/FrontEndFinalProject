@@ -30,6 +30,8 @@ function changeH1Text(){
 		changeToVacancies();
 	}else if(inf == "Team"){
 		changeToTeam();
+	}else if(inf == "Contacts"){
+		changeToContacts();
 	}
 }
 
@@ -58,6 +60,13 @@ function changeToTeam(){
 	window.scrollTo(0, 0);
 }
 
+function changeToContacts(){
+	document.getElementById("txt").innerHTML = "Contacts";
+	document.getElementById("info_img").src = "../Asserts/contacts.jpg"
+	document.getElementById("text").innerHTML = "Our contacts are: Phone: +995 999 222 333, (032) 24 99 99; Email: crss@gmail.com;" + 
+												"<br> Please contact us in case of any problem or complain."
+	window.scrollTo(0, 0);
+}
 
 // -----------------
 window.addEventListener("load", changeH1Text);
