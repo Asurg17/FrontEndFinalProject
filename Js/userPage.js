@@ -40,7 +40,7 @@ window.onload = function(){
 
 function redirectToMainPage(){
 
-	window.location.replace("../Html/index.html");
+	window.location.replace("../index.html");
 
 }
 
