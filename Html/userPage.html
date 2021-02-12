@@ -51,7 +51,7 @@
 
                 <div class="popup_elem">
                     <label for="model_year">Model Year</label>
-                    <input type="text" id="model_year" required>
+                    <input type="number" id="model_year" required>
                 </div>
 
                 <div class="popup_elem">
@@ -61,7 +61,7 @@
 
                 <div class="popup_elem">
                     <label for="engine">Engine</label>
-                    <input type="text" id="engine" required>
+                    <input type="double" id="engine" required>
                 </div>
 
                 <div class="popup_elem">
@@ -86,12 +86,12 @@
 
                 <div class="popup_elem">
                     <label for="seats">Seats</label>
-                    <input type="text" id="seats" required>
+                    <input type="number" id="seats" required>
                 </div>
 
                 <div class="popup_elem">
                     <label for="price">Price</label>
-                    <input type="text" id="price" required>
+                    <input type="number" id="price" required>
                 </div> 
 
                 <div class="popup_elem">
@@ -105,7 +105,7 @@
                 </div>
 
                 <div class="popup_elem">
-                    <input type="submit" value="Add Car" class="submit">
+                    <input type="submit" value="Add Car" class="submit" id="b_add_car">
                 </div>
 
             </form>
@@ -129,7 +129,7 @@
                 </div>
 
                 <div class="popup_elem">
-                    <input type="submit" value="Remove Car" class="submit">
+                    <input type="submit" value="Remove Car" class="submit" id="b_remove_car">
                 </div>
 
             </form>
@@ -153,8 +153,13 @@
                 </div>
 
                 <div class="popup_elem">
-                    <label for="whole_name">Whole Name</label>
-                    <input type="text" id="whole_name">
+                    <label for="frst_name">First Name</label>
+                    <input type="text" id="frst_name">
+                </div>
+
+                <div class="popup_elem">
+                    <label for="lst_name">Last Name</label>
+                    <input type="text" id="lst_name">
                 </div>
 
                 <div class="popup_elem">
@@ -168,7 +173,7 @@
                 </div>
 
                 <div class="popup_elem">
-                    <input type="submit" value="Change Data" class="submit">
+                    <input type="submit" value="Change Data" class="submit" id="b_change_pdata">
                 </div>
 
             </form>
@@ -202,7 +207,7 @@
                 </div>
 
                 <div class="popup_elem">
-                    <input type="submit" value="Change Password" class="submit">
+                    <input type="submit" value="Change Password" class="submit" id="b_change_password">
                 </div>
 
             </form>
