@@ -112,6 +112,30 @@
 
         </div>
 
+        <div class="remove_car_popup">
+            <div class="popup_close" onclick="closeClosePopupForm()">&times;</div>
+            
+            <form class="form">
+                
+                <div class="form_image">
+                    <img src="..\Asserts\logo.png">
+                </div>
+
+                <div class="popup_label">Remove Car</div>
+
+                <div class="popup_elem">
+                    <label for="car_id">Car Id</label>
+                    <input type="text" id="car_id" required>
+                </div>
+
+                <div class="popup_elem">
+                    <input type="submit" value="Remove Car" class="submit">
+                </div>
+
+            </form>
+
+        </div>
+
         <div class="change_data_popup">
             <div class="popup_close" onclick="closeChPopupForm()">&times;</div>
             
@@ -238,9 +262,10 @@
 
             <div class="add_car_button">
                 
-                <button class="button" onclick="openPopupForm()"> Add Car </button>
-                <button class="button" onclick="openChPswPopupForm()"> Change Password </button>
-                <button class="button" onclick="openChPopupForm()"> Change personal data </button>
+                <button class="button" id="add_car"> Add Car </button>
+                <button class="button" id="remove_car"> Remove Car </button>
+                <button class="button" id="cange_password"> Change Password </button>
+                <button class="button" id="change_pdata"> Change personal data </button>
 
             </div>
 

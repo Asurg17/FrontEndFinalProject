@@ -243,14 +243,13 @@ h2.slogan{
 	background-color: white;
 }
 
-/*Top*/
-.top{
+.advice{
 	height: 200px;
 	width: 100%;
 	background-color: #3A302E;
 }
 
-.top_label_div{
+/*top_label_div{
 	padding-left: 30px;
 }
 
@@ -260,7 +259,7 @@ h2.slogan{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 50px;
 }
-
+*/
 
 /*Benefits*/
 .benefits{

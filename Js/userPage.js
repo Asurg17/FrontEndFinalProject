@@ -6,6 +6,13 @@ window.onload = function(){
 
 	document.getElementById("header_logo").addEventListener("click", redirectToMainPage);
 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	document.getElementById("add_car").addEventListener("click", openPopupForm);
+	document.getElementById("remove_car").addEventListener("click", openClosePopupForm);
+	document.getElementById("cange_password").addEventListener("click", openChPswPopupForm);
+	document.getElementById("change_pdata").addEventListener("click", openChPopupForm);
+
 	// ---
 
 	var url = document.location.href, 
@@ -68,6 +75,14 @@ function closePopupForm(){
 	document.body.classList.remove("showAddCarForm");
 }
 
+function openClosePopupForm(){
+	document.body.classList.add("showRemoveCarForm");
+}
+
+function closeClosePopupForm(){
+	document.body.classList.remove("showRemoveCarForm");
+}
+
 function openChPopupForm(){
 	document.body.classList.add("showChAddCarForm");
 }
@@ -86,6 +101,7 @@ function closeChPswPopupForm(){
 
 function closeEveryForm(){
 	document.body.classList.remove("showAddCarForm");
+	document.body.classList.remove("showRemoveCarForm");
 	document.body.classList.remove("showChAddCarForm");
 	document.body.classList.remove("showChPasswordForm");
 }

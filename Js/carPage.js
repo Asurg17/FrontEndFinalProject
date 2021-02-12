@@ -53,6 +53,7 @@ function displayCarInfo(data, carId){
 	}
 
 	document.getElementById("car_name").innerHTML = curCarInfo.car_name;
+	document.getElementById("car_id").innerHTML = "N " + curCarInfo.id;
 	document.getElementById("manufacturer").innerHTML = "Manufacturer: " + curCarInfo.manufacturer;
 	document.getElementById("model").innerHTML = "Model: " + curCarInfo.model;
 	document.getElementById("year").innerHTML = "Model Year: " + curCarInfo.model_year;
