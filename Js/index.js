@@ -30,7 +30,7 @@ function searchTheCarByCarName(){
 
 	var carName = document.getElementById("srch_txt").value;
 
-	window.location.href = "../Html/searchPage.html?carName=" + encodeURIComponent(carName);
+	window.location.href = "./Html/searchPage.html?carName=" + encodeURIComponent(carName);
 
 }
 
@@ -40,7 +40,7 @@ function searchTheCarByLocationAndDate(){
 	var from = document.getElementById("c_from").value;
 	var until = document.getElementById("c_until").value;
 
-	window.location.href = "../Html/searchPage.html?location=" + encodeURIComponent(location) +
+	window.location.href = "./Html/searchPage.html?location=" + encodeURIComponent(location) +
 						   "&from=" + encodeURIComponent(from) + "&until=" + encodeURIComponent(until);
 
 }
@@ -51,7 +51,7 @@ function searchTheCarByLocationAndDate(){
 
 function redirectToUserPage(){
 
-	fetch('../Json/users.json')
+	fetch('./Json/users.json')
 		.then(response => response.json())
 		.then((result) => {redirect(result)});
 
@@ -79,7 +79,7 @@ function redirect(data){
 
 				var id = index;
 
-				window.location.href = "../Html/userPage.html?id=" + encodeURIComponent(id);
+				window.location.href = "./Html/userPage.html?id=" + encodeURIComponent(id);
 
 				break;
 
@@ -111,7 +111,7 @@ function redirect(data){
 
 function getUserJson(){
 
-	fetch('../Json/users.json')
+	fetch('./Json/users.json')
 		.then(response => response.json())
 		.then((result) => {addNewUser(result)});
 
@@ -131,7 +131,7 @@ function addNewUser(data){
 	checkPassword(password, conf_password);
 	checkUser(username, data);
 
-	// to be continued ...
+	// to be continued ..
 		
 }
 
