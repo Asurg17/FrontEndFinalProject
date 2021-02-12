@@ -46,7 +46,7 @@
 }
 
 .showSignUpForm .signup_popup {
-  top:70%;
+  top:110%;
   opacity:1;
   transform:translate(-50%,-50%) scale(1);
 }
