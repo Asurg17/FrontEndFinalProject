@@ -26,7 +26,7 @@
         <div class="add_car_popup">
             <div class="popup_close" onclick="closePopupForm()">&times;</div>
             
-            <form class="form">
+            <form class="form" id="f_add_car">
                 
                 <div class="form_image">
                     <img src="..\Asserts\logo.png">
@@ -36,67 +36,67 @@
 
                 <div class="popup_elem">
                     <label for="car_name">Car Name</label>
-                    <input type="text" id="car_name" required>
+                    <input type="text" placeholder="Required*" id="car_name">
                 </div>
 
                 <div class="popup_elem">
                     <label for="manufacturer">Manufacturer</label>
-                    <input type="text" id="manufacturer" required>
+                    <input type="text" placeholder="Required*" id="manufacturer">
                 </div>
 
                 <div class="popup_elem">
                     <label for="model">Model</label>
-                    <input type="text" id="model" required>
+                    <input type="text" placeholder="Required*" id="model">
                 </div>
 
                 <div class="popup_elem">
                     <label for="model_year">Model Year</label>
-                    <input type="number" id="model_year" required>
+                    <input type="number" placeholder="Required*" id="model_year">
                 </div>
 
                 <div class="popup_elem">
                     <label for="category">Category</label>
-                    <input type="text" id="category" required>
+                    <input type="text" placeholder="Required*" id="category">
                 </div>
 
                 <div class="popup_elem">
                     <label for="engine">Engine</label>
-                    <input type="double" id="engine" required>
+                    <input type="double" placeholder="Required*" id="engine">
                 </div>
 
                 <div class="popup_elem">
                     <label for="transmission">Transmission</label>
-                    <input type="text" id="transmission" required>
+                    <input type="text" placeholder="Required*" id="transmission">
                 </div>
 
                 <div class="popup_elem">
                     <label for="helm">Helm</label>
-                    <input type="text" id="helm" required>
+                    <input type="text" placeholder="Required*" id="helm">
                 </div>
 
                 <div class="popup_elem">
                     <label for="fuel">Fuel</label>
-                    <input type="text" id="fuel" required>
+                    <input type="text" placeholder="Required*" id="fuel">
                 </div>
 
                 <div class="popup_elem">
                     <label for="color">Color</label>
-                    <input type="text" id="color" required>
+                    <input type="text" placeholder="Required*" id="color">
                 </div>
 
                 <div class="popup_elem">
                     <label for="seats">Seats</label>
-                    <input type="number" id="seats" required>
+                    <input type="number" placeholder="Required*" id="seats">
                 </div>
 
                 <div class="popup_elem">
                     <label for="price">Price</label>
-                    <input type="number" id="price" required>
+                    <input type="number" placeholder="Required*" id="price">
                 </div> 
 
                 <div class="popup_elem">
                     <label for="images">Images</label>
-                    <input type="file" id="images" style="font-size: 10px; padding: 3px 5px; height: 100%" multiple required>
+                    <input type="file" id="images" style="font-size: 10px; padding: 3px 5px; height: 100%" multiple>
                 </div>
 
                 <div class="popup_elem">
@@ -105,7 +105,7 @@
                 </div>
 
                 <div class="popup_elem">
-                    <input type="submit" value="Add Car" class="submit" id="b_add_car">
+                    <input value="Add Car" class="submit" id="b_add_car" onclick="closePopupForm()">
                 </div>
 
             </form>
@@ -115,7 +115,7 @@
         <div class="remove_car_popup">
             <div class="popup_close" onclick="closeClosePopupForm()">&times;</div>
             
-            <form class="form">
+            <form class="form" id="f_remove_car">
                 
                 <div class="form_image">
                     <img src="..\Asserts\logo.png">
@@ -125,11 +125,11 @@
 
                 <div class="popup_elem">
                     <label for="car_id">Car Id</label>
-                    <input type="text" id="car_id" required>
+                    <input type="text" placeholder="Required*" id="car_id">
                 </div>
 
                 <div class="popup_elem">
-                    <input type="submit" value="Remove Car" class="submit" id="b_remove_car">
+                    <input value="Remove Car" class="submit" id="b_remove_car" onclick="closeClosePopupForm()">
                 </div>
 
             </form>
@@ -139,7 +139,7 @@
         <div class="change_data_popup">
             <div class="popup_close" onclick="closeChPopupForm()">&times;</div>
             
-            <form class="form">
+            <form class="form" id="f_personal_data">
                 
                 <div class="form_image">
                     <img src="..\Asserts\logo.png">
@@ -173,7 +173,7 @@
                 </div>
 
                 <div class="popup_elem">
-                    <input type="submit" value="Change Data" class="submit" id="b_change_pdata">
+                    <input value="Change Data" class="submit" id="b_change_pdata" onclick="closeChPopupForm()">
                 </div>
 
             </form>
@@ -183,7 +183,7 @@
         <div class="change_password_popup">
             <div class="popup_close" onclick="closeChPswPopupForm()">&times;</div>
             
-            <form class="form">
+            <form class="form" id="f_password">
                 
                 <div class="form_image">
                     <img src="..\Asserts\logo.png">
@@ -193,21 +193,21 @@
 
                 <div class="popup_elem">
                     <label for="old_password">Current Password</label>
-                    <input type="password" id="old_password" required>
+                    <input type="password" id="old_password">
                 </div>
 
                 <div class="popup_elem">
                     <label for="new_password">New Password</label>
-                    <input type="password" id="new_password" required>
+                    <input type="password" id="new_password">
                 </div>
 
                 <div class="popup_elem">
                     <label for="confirm_password">Confirm Password</label>
-                    <input type="password" id="confirm_password" required>
+                    <input type="password" id="confirm_password">
                 </div>
 
                 <div class="popup_elem">
-                    <input type="submit" value="Change Password" class="submit" id="b_change_password">
+                    <input value="Change Password" class="submit" id="b_change_password" onclick="closeChPswPopupForm()">
                 </div>
 
             </form>

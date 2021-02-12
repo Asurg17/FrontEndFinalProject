@@ -87,6 +87,7 @@ body {
 	color: white;
 	opacity: 0.5;
 	transition: 0.3s;
+	text-align: center;
 }
 
 .submit:hover{
