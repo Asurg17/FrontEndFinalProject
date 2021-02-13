@@ -13,7 +13,7 @@ window.onload = function(){
         data[tmp[0]] = tmp[1];
     }
 
-	getUserInfo(data.id);
+	setUserInfo(data.id);
 
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -50,15 +50,13 @@ function redirectToMainPage(){
 
 var curUser;
 
-function getUserInfo(id){
+// function getUserInfo(id){
 
-	setUserInfo(id);
+// 	fetch('../Json/users.json')
+// 		.then(response => response.json())
+// 		.then((result) => {setUserInfo(result,id)});
 
-	// fetch('../Json/users.json')
-	// 	.then(response => response.json())
-	// 	.then((result) => {setUserInfo(result,id)});
-
-}
+// }
 
 
 function setUserInfo(id){
@@ -237,10 +235,20 @@ function changePassword(){
 
 		if(newPassword.length < 5 || confNewPassword < 5){
 			alert("Password must be al least five characters long!");
+		}else{
+
+
+			var data = JSON.parse(localStorage.getItem("users")); 
+			var user = data[curUser.id - 1];
+
+			user.password = newPassword;
+
+			// alert(JSON.stringify(user));
+
+			localStorage.removeItem("users");
+			localStorage.setItem("users", JSON.stringify(data));
+
 		}
-
-
-		// change password in json
 
 	}
 
@@ -251,7 +259,6 @@ function changePassword(){
 
 function changePersonalData(){
 
-	var username = document.getElementById("username").value;
 	var firstName = document.getElementById("frst_name").value;
 	var lastName = document.getElementById("lst_name").value;
 	var phone = document.getElementById("contact").value;
@@ -259,9 +266,35 @@ function changePersonalData(){
 
 	document.getElementById("f_personal_data").reset();
 
-	// add new personal data into json
+	var data = JSON.parse(localStorage.getItem("users")); 
 
+	var user = data[curUser.id - 1];
 
+	if(firstName != ""){
+		user.first_name = firstName;
+	}
+
+	if(lastName != ""){
+		user.last_name = lastName;
+	}
+
+	if(phone != ""){
+		user.phone = phone;
+	}
+
+	if(location != ""){
+		user.location = location;
+	}
+
+	// alert(JSON.stringify(user));
+
+	// console.log(data[curUser.id - 1].username, data[curUser.id - 1].first_name, data[curUser.id - 1].last_name, 
+	// 			data[curUser.id - 1].phone, data[curUser.id - 1].location);
+
+	localStorage.removeItem("users");
+	localStorage.setItem("users", JSON.stringify(data));
+
+	window.location.reload(true);
 
 }
 
