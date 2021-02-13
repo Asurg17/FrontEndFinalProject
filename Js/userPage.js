@@ -293,25 +293,38 @@ function showAdverIds(){
 
 }
 
+var checker = false;
+
 function listIds(data){
 
 	var cur_owner_id = curUser.id;
 
-	var ids = []
+	var object = document.getElementById("my_cars");
 
-	for(var i=0; i<data.length; i++){
-		if(data[i].owner_id == cur_owner_id){
+	var newElem;
+	var counter = 0;
 
-			var newElem = ["[ " + data[i].id + ": " + data[i].car_name + ", " + data[i].color + " ]"]
+	if(!checker){
+
+		document.getElementById("car_ids").style.display = "flex";
+
+		checker = true;
+
+		for(var i=0; i<data.length; i++){
+			if(data[i].owner_id == cur_owner_id){
+
+				counter += 1;
+
+				newElem = ["[ Car Id: " + data[i].id + "; Car Name: " + data[i].car_name + "; Color: " + data[i].color + " ]"]
+
+				object.innerHTML += (counter) + ") " + newElem + " ";
 			
-			ids.push(newElem);
-		
+			}
 		}
-	}
 
-	alert(ids);
+	}	
 
-	console.log(ids);
+	
 
 
 }

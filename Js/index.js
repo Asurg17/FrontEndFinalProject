@@ -5,14 +5,15 @@ let num;
 
 // ---------------------------------------------------------------
 
-window.addEventListener("resize", checkWindowSize);
 
-window.onload = function(){
+window.onload = function(){ 
 
 	maxSize = 6;
 	num = 0;
 	
 	checkWindowSize();
+
+	window.addEventListener("resize", checkWindowSize);
 
 	document.getElementById("left_one").addEventListener("click", slideRight);
 	document.getElementById("right_one").addEventListener("click", slideLeft);
