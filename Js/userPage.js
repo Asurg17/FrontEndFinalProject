@@ -52,14 +52,18 @@ var curUser;
 
 function getUserInfo(id){
 
-	fetch('../Json/users.json')
-		.then(response => response.json())
-		.then((result) => {setUserInfo(result,id)});
+	setUserInfo(id);
+
+	// fetch('../Json/users.json')
+	// 	.then(response => response.json())
+	// 	.then((result) => {setUserInfo(result,id)});
 
 }
 
 
-function setUserInfo(data, id){
+function setUserInfo(id){
+
+	var data = JSON.parse(localStorage.getItem("users")); 
 
 	curUser = data[id];
 
@@ -171,9 +175,6 @@ function add(data){
 
  	}
 
- 	// add car into json
-
-
 }
 
 // -- - -- - -- - -- - -- - -- - --
@@ -260,6 +261,8 @@ function changePersonalData(){
 
 	// add new personal data into json
 
+
+
 }
 
 // -- - -- - -- - -- - -- - -- - --
@@ -287,7 +290,7 @@ function addBusyTime(){
 
 function showAdverIds(){
 
-	fetch('../Json/cars.json')
+	fetch('../Json/test.json')
 			.then(response => response.json())
 			.then((result) => {listIds(result)});
 
@@ -297,34 +300,33 @@ var checker = false;
 
 function listIds(data){
 
-	var cur_owner_id = curUser.id;
+	// var cur_owner_id = curUser.id;
 
-	var object = document.getElementById("my_cars");
+	// var object = document.getElementById("my_cars");
 
-	var newElem;
-	var counter = 0;
+	// var newElem;
+	// var counter = 0;
 
-	if(!checker){
+	// if(!checker){
 
-		document.getElementById("car_ids").style.display = "flex";
+	// 	document.getElementById("car_ids").style.display = "flex";
 
-		checker = true;
+	// 	checker = true;
 
-		for(var i=0; i<data.length; i++){
-			if(data[i].owner_id == cur_owner_id){
+	// 	for(var i=0; i<data.length; i++){
+	// 		if(data[i].owner_id == cur_owner_id){
 
-				counter += 1;
+	// 			counter += 1;
 
-				newElem = ["[ Car Id: " + data[i].id + "; Car Name: " + data[i].car_name + "; Color: " + data[i].color + " ]"]
+	// 			newElem = ["[ Car Id: " + data[i].id + "; Car Name: " + data[i].car_name + "; Color: " + data[i].color + "]"]
 
-				object.innerHTML += (counter) + ") " + newElem + " ";
+	// 			object.innerHTML += (counter) + ") " + newElem + " ";
 			
-			}
-		}
+	// 		}
+	// 	}
 
-	}	
+	// }	
 
-	
 
 
 }

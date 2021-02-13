@@ -8,6 +8,8 @@ let num;
 
 window.onload = function(){ 
 
+	addJsonsToLocalhost();
+
 	maxSize = 6;
 	num = 0;
 	
@@ -18,10 +20,48 @@ window.onload = function(){
 	document.getElementById("left_one").addEventListener("click", slideRight);
 	document.getElementById("right_one").addEventListener("click", slideLeft);
 
-	document.getElementById("log_in").addEventListener("click", redirectToUserPage);
-	document.getElementById("sign_up").addEventListener("click", getUserJson);
+	document.getElementById("log_in").addEventListener("click", redirect);
+	document.getElementById("sign_up").addEventListener("click", addNewUser);
 	document.getElementById("search_the_car").addEventListener("click", searchTheCarByCarName);
 	document.getElementById("srch_butt").addEventListener("click", searchTheCarByLocationAndDate);
+
+	// alert(localStorage.getItem("uses"));
+
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+function addJsonsToLocalhost(){
+
+	if (localStorage.getItem("users") === null) {
+		fetch('./Json/users.json')
+			.then(response => response.json())
+			.then((result) => {addUsers(result)});
+	}
+
+
+	if (localStorage.getItem("cars") === null) {
+		fetch('./Json/cars.json')
+			.then(response => response.json())
+			.then((result) => {addCars(result)});
+	}
+
+	// localStorage.removeItem("cars");
+
+	// localStorage.removeItem("users");
+
+}
+
+function addUsers(users){
+
+	localStorage.setItem("users", JSON.stringify(users));
+
+}
+
+
+function addCars(cars){
+
+	localStorage.setItem("cars", JSON.stringify(cars));
 
 }
 
@@ -50,15 +90,17 @@ function searchTheCarByLocationAndDate(){
 
 // ----------------------------------------------------------------
 
-function redirectToUserPage(){
+// function redirectToUserPage(){
 
-	fetch('./Json/users.json')
-		.then(response => response.json())
-		.then((result) => {redirect(result)});
+// 	fetch('./Json/users.json')
+// 		.then(response => response.json())
+// 		.then((result) => {redirect(result)});
 
-}
+// }
 
-function redirect(data){
+function redirect(){
+
+	var data = JSON.parse(localStorage.getItem("users")); 
 
 	var username = document.getElementById("l_username").value;
 	var password = document.getElementById("l_password").value;
@@ -110,15 +152,17 @@ function redirect(data){
 
 // ------------------------------------------------------
 
-function getUserJson(){
+// function getUserJson(){
 
-	fetch('./Json/users.json')
-		.then(response => response.json())
-		.then((result) => {addNewUser(result)});
+// 	fetch('./Json/users.json')
+// 		.then(response => response.json())
+// 		.then((result) => {addNewUser(result)});
 
-}
+// }
 
-function addNewUser(data){
+function addNewUser(){
+
+	var data = JSON.parse(localStorage.getItem("users")); 
 
 	var first_name = document.getElementById("s_firstName").value;
 	var last_name = document.getElementById("s_lastName").value;
@@ -129,34 +173,77 @@ function addNewUser(data){
 	var password = document.getElementById("s_password").value;
 	var conf_password = document.getElementById("s_confirm_password").value;
 
-	checkPassword(password, conf_password);
-	checkUser(username, data);
+	var checker;
 
-	// to be continued ..
+	if(first_name == "" || last_name == "" || email == "" || username == "" || 
+	   phone == "" || location == "" || password  == "" || conf_password == ""){
+
+		checker = true;
+
+	}else if(password.length < 5 || conf_password.length < 5){
+
+		alert("Password must be at least five characters long!");
+		checker = true;
+
+	}else{
 		
-}
+		checker = checkData(username, data, password, conf_password);
 
-// checks if password are same
-function checkPassword(password, conf_password){
-	if (password != conf_password) {
-		alert("Passwords are not same!");
 	}
+
+	// add new user
+
+	if(!checker){
+
+		var new_user_id = data.length + 1;
+
+		var new_user = {  id: new_user_id,
+						  first_name: first_name,
+						  last_name: last_name,
+						  email: email,
+						  username: username,
+						  password: password,
+						  location: location,
+						  phone: phone,
+						  raiting: "5.0",
+						  adverts: 0}
+
+		var oldData = localStorage.getItem("users");
+		oldData = oldData.slice(0, -1);
+
+		// alert(oldData);
+		
+		var newData = oldData + ',' + JSON.stringify(new_user) + ']';
+
+		// alert(newData);
+
+		localStorage.removeItem("users");
+		localStorage.setItem("users", newData);
+
+		// alert(localStorage.getItem("users"));
+
+	}
+
 }
 
-// checks if user with given username already exists
-function checkUser(username, data){
+// checks if username already exists or if passwords are the same
+function checkData(username, data, password, conf_password){
 
 	for(var i=0; i<data.length; i++){
 
 		if(username == data[i].username){
+			checker = true;
 			alert("Username already exists!");
-			break;
+			return true;
 		}
 
 	}
 
+	if (password != conf_password) {
+		alert("Passwords are not same!");
+		return true;
+	}
 }
-
 
 // ---------------------------------------
 

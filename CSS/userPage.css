@@ -274,7 +274,7 @@
 
 	/*popups*/
 
-	.add_car_popup, .remove_car_popup, .change_data_popup, .change_password_popup  {
+	.add_car_popup, .remove_car_popup, .change_data_popup, .change_password_popup, .add_car_busy_time_popup {
 		width: 60%;
 		top: 10%;
 		left: 20% !important;
@@ -297,7 +297,7 @@
 
 	/*popups*/
 
-	.add_car_popup, .remove_car_popup, .change_data_popup, .change_password_popup  {
+	.add_car_popup, .remove_car_popup, .change_data_popup, .change_password_popup, .add_car_busy_time_popup {
 		width: 70%;
 		top: 10%;
 		left: 15% !important;
@@ -313,7 +313,7 @@
 
 	/*popups*/
 
-	.add_car_popup, .remove_car_popup, .change_data_popup, .change_password_popup {
+	.add_car_popup, .remove_car_popup, .change_data_popup, .change_password_popup, .add_car_busy_time_popup {
 		width: 80%;
 		top: 10%;
 		left: 10% !important;
@@ -325,7 +325,7 @@
 
 	/*popups*/
 
-	.add_car_popup, .remove_car_popup, .change_data_popup, .change_password_popup {
+	.add_car_popup, .remove_car_popup, .change_data_popup, .change_password_popup, .add_car_busy_time_popup {
 		width: 90%;
 		top: 10%;
 		left: 5% !important;
@@ -341,7 +341,7 @@
 
 	/*popups*/
 
-	.add_car_popup, .remove_car_popup, .change_data_popup, .change_password_popup {
+	.add_car_popup, .remove_car_popup, .change_data_popup, .change_password_popup, .add_car_busy_time_popup {
 		width: 100%;
 		top: 10%;
 		left: 0% !important;
