@@ -343,13 +343,34 @@ function addBusyTime(){
 	var from = document.getElementById("busy_from").value;
 	var to = document.getElementById("busy_to").value;
 
-	if(carId == "" || from == "" || to == ""){
-		alert("Please fill all rows!");
+	if(carId == ""){
+		alert("Please enter id of the car!");
+	}else if(from == "" || to == ""){
+		alert("Please enter both busy form and busy to dates");
 	}else if(from > to){
 		alert("From date can't be bigger that to date!");
 	}else{
 
-		// am manqanis naxva da bysy_from busy_to s update-i
+		var data = JSON.parse(localStorage.getItem("cars")); 
+
+		curCar = data[carId-1];
+
+		if(curCar.owner_id != curUser.id){
+			alert("You can't change information about this car. (not owner)!");
+		}else{
+
+			document.getElementById("f_add_car_busy_time").reset();
+
+			curCar.busy_from = from;
+			curCar.busy_till = to;
+
+			localStorage.removeItem("cars");
+			localStorage.setItem("cars", JSON.stringify(data));
+
+			// alert(JSON.stringify(JSON.parse(localStorage.getItem("cars"))[carId-1]));
+
+		}
+
 
 	}
 
@@ -358,45 +379,39 @@ function addBusyTime(){
 
 // -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
+// function showAdverIds(){
+
+// 	fetch('../Json/test.json')
+// 			.then(response => response.json())
+// 			.then((result) => {listIds(result)});
+
+// }
+
 function showAdverIds(){
 
-	fetch('../Json/test.json')
-			.then(response => response.json())
-			.then((result) => {listIds(result)});
+	var data = JSON.parse(localStorage.getItem("cars"));
 
-}
+	var cur_owner_id = curUser.id;
 
-var checker = false;
+	var object = document.getElementById("my_cars");
 
-function listIds(data){
+	object.innerHTML = "";
 
-	// var cur_owner_id = curUser.id;
+	var newElem;
+	var counter = 0;
 
-	// var object = document.getElementById("my_cars");
+	document.getElementById("car_ids").style.display = "flex";
 
-	// var newElem;
-	// var counter = 0;
+	for(var i=0; i<data.length; i++){
+		if(data[i].owner_id == cur_owner_id){
 
-	// if(!checker){
+			counter += 1;
 
-	// 	document.getElementById("car_ids").style.display = "flex";
+			newElem = ["[ Car Id: " + data[i].id + "; Car Name: " + data[i].car_name + "; Color: " + data[i].color + "]"]
 
-	// 	checker = true;
-
-	// 	for(var i=0; i<data.length; i++){
-	// 		if(data[i].owner_id == cur_owner_id){
-
-	// 			counter += 1;
-
-	// 			newElem = ["[ Car Id: " + data[i].id + "; Car Name: " + data[i].car_name + "; Color: " + data[i].color + "]"]
-
-	// 			object.innerHTML += (counter) + ") " + newElem + " ";
-			
-	// 		}
-	// 	}
-
-	// }	
-
-
+			object.innerHTML += (counter) + ") " + newElem + " ";
+		
+		}
+	}
 
 }

@@ -47,7 +47,7 @@ function displayCarInfo(carId){
 
 	var data = JSON.parse(localStorage.getItem("cars")); 
 
-	alert(carId-1);
+	// alert(carId-1);
 
 	console.log(data[carId-1]);
 
@@ -74,13 +74,17 @@ function displayCarInfo(carId){
 	document.getElementById("car_description").innerHTML = curCarInfo.car_description;
 	document.getElementById("location").innerHTML = "Location: " + curCarInfo.location;
 
-	fetch('../Json/users.json')
-		.then(response => response.json())
-		.then((result) => {displayOwnerInfo(result, curCarInfo.owner_id)});
+	displayOwnerInfo(curCarInfo.owner_id);
+
+	// fetch('../Json/users.json')
+	// 	.then(response => response.json())
+	// 	.then((result) => {displayOwnerInfo(result, curCarInfo.owner_id)});
 
 }
 
-function displayOwnerInfo(data, owner_id){
+function displayOwnerInfo(owner_id){
+
+	var data = JSON.parse(localStorage.getItem("users")); 
 
 	var curOwner = data[owner_id-1];
 
