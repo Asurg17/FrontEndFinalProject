@@ -428,6 +428,10 @@ h2.slogan{
     	padding: 0px 20px;
 	}
 
+	.login_popup, .signup_popup{
+		width: 100%;
+	}
+
 }
 
 @media screen and (max-width: 500px) {
