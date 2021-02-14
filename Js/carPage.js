@@ -88,11 +88,15 @@ function displayOwnerInfo(owner_id){
 
 	var curOwner = data[owner_id-1];
 
-	console.log(owner_id);
+	alert(curOwner);
 
-	document.getElementById("owner").innerHTML = "Owner name: " + curOwner.first_name;
-	document.getElementById("contact").innerHTML = "Contact: (+995)" + curOwner.phone;
-	document.getElementById("raiting").innerHTML = "Raiting: " + curOwner.raiting;
+	if(curOwner != undefined){
+
+		document.getElementById("owner").innerHTML = "Owner name: " + curOwner.first_name;
+		document.getElementById("contact").innerHTML = "Contact: (+995)" + curOwner.phone;
+		document.getElementById("raiting").innerHTML = "Raiting: " + curOwner.raiting;
+
+	}
 
 }
 
