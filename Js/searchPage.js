@@ -255,9 +255,11 @@ function getCars(flag){
         info[tmp[0]] = tmp[1];
     }
 
-	fetch('../Json/cars.json')
-		.then(response => response.json())
-		.then((result) => {displayCars(result, info, flag)});
+    displayCars(info, flag);
+
+	// fetch('../Json/cars.json')
+	// 	.then(response => response.json())
+	// 	.then((result) => {displayCars(result, info, flag)});
 
 }
 
@@ -267,10 +269,11 @@ var page = 0;
 var lastPage = 0;
 var wholeData;
 
-function displayCars(data, info, flag){
+function displayCars(info, flag){
 
 	//--------------------------------------------------------------------- 
 
+	data = JSON.parse(localStorage.getItem("cars")); 
 
 
 	if(flag == "external"){

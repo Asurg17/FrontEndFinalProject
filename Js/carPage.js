@@ -19,7 +19,7 @@ window.onload = function(){
 	document.getElementById("left").addEventListener("click", showPreviousPhoto);
 	document.getElementById("right").addEventListener("click", showNextPhoto);
 
-	loadCarData(info);
+	displayCarInfo(info.carId);
 
 }
 
@@ -35,15 +35,21 @@ function searchTheCarByCarName(){
 
 }
 
-function loadCarData(info){
+// function loadCarData(info){
 
-	fetch('../Json/cars.json')
-		.then(response => response.json())
-		.then((result) => {displayCarInfo(result, info.carId)});
+// 	fetch('../Json/cars.json')
+// 		.then(response => response.json())
+// 		.then((result) => {displayCarInfo(result, info.carId)});
 
-}
+// }
 
-function displayCarInfo(data, carId){
+function displayCarInfo(carId){
+
+	var data = JSON.parse(localStorage.getItem("cars")); 
+
+	alert(carId-1);
+
+	console.log(data[carId-1]);
 
 	curCarInfo = data[carId-1];
 

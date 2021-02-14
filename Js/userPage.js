@@ -133,15 +133,19 @@ function closeEveryForm(){
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+// function addCar(){
+
+// 	fetch('../Json/cars.json')
+// 		.then(response => response.json())
+// 		.then((result) => {add(result)});
+
+// }
+
 function addCar(){
 
-	fetch('../Json/cars.json')
-		.then(response => response.json())
-		.then((result) => {add(result)});
+	var data = JSON.parse(localStorage.getItem("cars")); 
 
-}
-
-function add(data){
+	// alert(JSON.stringify(data));
 
 	var newCarId = data.length+1;
 
@@ -170,6 +174,39 @@ function add(data){
  	}else{
 
  		document.getElementById("f_add_car").reset();
+
+ 		var newCarId = data.length + 1;
+
+ 		var newCar = {id: newCarId,
+					  car_name: newCarName,
+					  manufacturer: newCarManufacturer,
+					  model: newCarModel,
+					  model_year: newCarModelYear,
+					  category: newCarCategory,
+					  engine: newCarEngine,
+					  transmission: newCarTransmission,
+					  helm: newCarHelm,
+					  fuel: newCarFuel,
+					  color: newCarColor,
+					  seats: newCarSeats,
+					  price: newCarPrice,
+					  pictures: [],
+					  car_description: newCarDescription,
+					  location: curUser.location,
+					  busy_from:"",
+					  busy_till: "",
+					  owner_id : curUser.id,
+					  owner_raiting: curUser.raiting};
+
+		// alert(JSON.stringify(newCar));
+
+		var oldData = localStorage.getItem("cars");
+		oldData = oldData.slice(0, -1);
+
+		var newData = oldData + ',' + JSON.stringify(newCar) + ']';
+
+		localStorage.removeItem("cars");
+		localStorage.setItem("cars", newData);
 
  	}
 
