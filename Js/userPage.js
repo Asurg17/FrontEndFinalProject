@@ -232,7 +232,7 @@ function addCar(){
 					  owner_id : curUser.id,
 					  owner_raiting: curUser.raiting};
 
-		alert(JSON.stringify(newCar));
+		// alert(JSON.stringify(newCar));
 
 		var oldData = localStorage.getItem("cars");
 		oldData = oldData.slice(0, -1);
