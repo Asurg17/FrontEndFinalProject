@@ -206,7 +206,7 @@ function addNewUser(){
 						  location: location,
 						  phone: phone,
 						  raiting: "5.0",
-						  adverts: 0}
+						  adverts: 0};
 
 		var oldData = localStorage.getItem("users");
 		oldData = oldData.slice(0, -1);
@@ -221,6 +221,8 @@ function addNewUser(){
 		localStorage.setItem("users", newData);
 
 		// alert(localStorage.getItem("users"));
+
+		alert("You Have Been Successfully Registered");
 
 	}
 

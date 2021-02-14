@@ -147,7 +147,12 @@ function addCar(){
 
 	// alert(JSON.stringify(data));
 
-	var newCarId = data.length+1;
+	// alert(data.length);
+	// alert(data[data.length-1].id);
+	// alert(JSON.stringify(data[data.length-1]));
+	// alert(data[data.length-1].id + 1);
+
+	var newCarId = data[data.length-1].id+1;
 
 	var newCarName = document.getElementById("car_name").value;
 	var newCarManufacturer = document.getElementById("manufacturer").value;
@@ -174,8 +179,6 @@ function addCar(){
  	}else{
 
  		document.getElementById("f_add_car").reset();
-
- 		var newCarId = data.length + 1;
 
  		var newCar = {id: newCarId,
 					  car_name: newCarName,
@@ -208,31 +211,40 @@ function addCar(){
 		localStorage.removeItem("cars");
 		localStorage.setItem("cars", newData);
 
+		window.location.reload(true);
+
  	}
 
 }
 
 // -- - -- - -- - -- - -- - -- - --
 
+// function removeCar(){
+
+// 	var carId = document.getElementById("car_id").value;
+
+// 	document.getElementById("f_remove_car").reset();
+
+// 	if(carId != ""){
+// 		fetch('../Json/cars.json')
+// 			.then(response => response.json())
+// 			.then((result) => {remove(result, carId)});
+// 	}else{
+// 		alert("Please enter car id, wich you want to remove");
+// 	}
+
+// }
+
 function removeCar(){
 
+	var data = JSON.parse(localStorage.getItem("cars"));
 	var carId = document.getElementById("car_id").value;
 
 	document.getElementById("f_remove_car").reset();
 
-	if(carId != ""){
-		fetch('../Json/cars.json')
-			.then(response => response.json())
-			.then((result) => {remove(result, carId)});
-	}else{
+	if(carId == ""){
 		alert("Please enter car id, wich you want to remove");
-	}
-
-}
-
-function remove(data, carId){
-
-	if(data[carId-1] == null){
+	}else if(data[carId-1] == null){
 		alert("Enter correct car id!");
 	}else{
 
@@ -244,7 +256,28 @@ function remove(data, carId){
 
 		}else{
 
-			// remove car from json
+			// curCar = data[carId-1];;
+
+			// alert(JSON.stringify(data[carId-1]));
+
+			var newData = "[";
+
+			for (var i = 0; i < data.length; i++) {
+				
+				if(i != carId-1){
+					newData += JSON.stringify(data[i]) + ',';
+				}
+
+			}
+
+			newData = newData.slice(0, -1) + ']';
+
+			// console.log(newData);
+
+			localStorage.removeItem("cars");
+			localStorage.setItem("cars", newData);
+
+			window.location.reload(true);
 
 		}
 

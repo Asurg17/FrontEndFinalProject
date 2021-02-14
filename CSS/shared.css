@@ -94,6 +94,21 @@ body {
 	opacity: 1;
 }
 
+/*.message_popup_sub{
+	width: 30%;
+	height: 200px;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	top: 10px;
+	left: 35%;
+	right: 35%;
+	background-color: #F7F7F7;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}*/
+
 /*Search Button*/
 
 .button{
