@@ -115,7 +115,7 @@ h2.slogan{
 }
 
 .label{
-	font-size: 10px;
+	font-size: 10px !important;
 	font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -288,7 +288,12 @@ h2.slogan{
 
 /*Responsive*/
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1250px) {
+
+	.benefits{
+		padding-left: 100px;
+		padding-right: 100px;
+	}
 
 	.benefits_sub{
 		text-align: center;
@@ -296,16 +301,12 @@ h2.slogan{
 
 	.benefits_sub_div{
 		text-align: center;
-		font-size: 25px;
-	}
-
-	.benefits{
-		padding-left: 200px;
-		padding-right: 200px;
+		font-size: 20px;
 	}
 
 	.container{
 		margin:0px;
+		padding: 0 50px;
 	}
 
 	.location, .from, .until, .srch_button_div{
@@ -320,24 +321,6 @@ h2.slogan{
 		font-size: 20px;
 	}
 
-
-}
-
-
-@media screen and (max-width: 1250px) {
-
-	.benefits{
-		padding-left: 100px;
-		padding-right: 100px;
-	}
-
-	.benefits_sub_div{
-		font-size: 20px;
-	}
-
-	.container{
-		padding: 0 50px;
-	}
 
 }
 
