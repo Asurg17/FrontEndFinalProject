@@ -211,6 +211,14 @@ function addCar(){
 		localStorage.removeItem("cars");
 		localStorage.setItem("cars", newData);
 
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+		var users = JSON.parse(localStorage.getItem("users"));
+		users[curUser.id-1].adverts = users[curUser.id-1].adverts + 1; 
+
+		localStorage.removeItem("users");
+		localStorage.setItem("users", JSON.stringify(users));
+
 		window.location.reload(true);
 
  	}
@@ -248,7 +256,7 @@ function removeCar(){
 		alert("Enter correct car id!");
 	}else{
 
-		var carUserId = data[carId-1].owner_id;;
+		var carUserId = data[carId-1].owner_id;
 		
 		if(carUserId != curUser.id){
 
@@ -276,6 +284,14 @@ function removeCar(){
 
 			localStorage.removeItem("cars");
 			localStorage.setItem("cars", newData);
+
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+			var users = JSON.parse(localStorage.getItem("users"));
+			users[curUser.id-1].adverts = users[curUser.id-1].adverts - 1; 
+
+			localStorage.removeItem("users");
+			localStorage.setItem("users", JSON.stringify(users));
 
 			window.location.reload(true);
 

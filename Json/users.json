@@ -9,7 +9,7 @@
 	  "location": "Batumi",
 	  "phone": "598947568",
 	  "raiting": "5.0",
-	  "adverts": "3"
+	  "adverts": 3
 	},
 	{
 	  "id": 2,
@@ -21,7 +21,7 @@
 	  "location": "Kutaisi",
 	  "phone": "555875492",
 	  "raiting": "5.0",
-	  "adverts": "0"
+	  "adverts": 0
 	},
 	{
 	  "id": 3,
@@ -33,7 +33,7 @@
 	  "location": "Tbilisi",
 	  "phone": "555443322",
 	  "raiting": "5.0",
-	  "adverts": "5"
+	  "adverts": 5
 	},
 	{
 	  "id": 4,
@@ -45,7 +45,7 @@
 	  "location": "Poti",
 	  "phone": "555443342",
 	  "raiting": "5.0",
-	  "adverts": "5"
+	  "adverts": 5
 	},
 	{
 	  "id": 5,
@@ -57,7 +57,7 @@
 	  "location": "Zestafoni",
 	  "phone": "571453930",
 	  "raiting": "5.0",
-	  "adverts": "5"
+	  "adverts": 5
 	},
 	{
 	  "id": 6,
@@ -69,7 +69,7 @@
 	  "location": "Kutaisi",
 	  "phone": "571242588",
 	  "raiting": "5.0",
-	  "adverts": "3"
+	  "adverts": 3
 	},
 	{
 	  "id": 7,
@@ -81,7 +81,7 @@
 	  "location": "Tbilisi",
 	  "phone": "575755677",
 	  "raiting": "5.0",
-	  "adverts": "0"
+	  "adverts": 0
 	}
 
 ]
