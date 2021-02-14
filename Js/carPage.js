@@ -49,7 +49,7 @@ function displayCarInfo(carId){
 
 	// alert(carId-1);
 
-	console.log(data[carId-1]);
+	// console.log(data[carId-1]);
 
 	curCarInfo = data[carId-1];
 
@@ -88,7 +88,7 @@ function displayOwnerInfo(owner_id){
 
 	var curOwner = data[owner_id-1];
 
-	alert(curOwner);
+	// alert(curOwner);
 
 	if(curOwner != undefined){
 

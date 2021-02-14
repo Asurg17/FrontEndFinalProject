@@ -27,11 +27,8 @@
 
 }
 
-.sub_arrow i:active{
-
-	color: grey;	
-	transform: scale(0.7);
-
+.sub_arrow:hover{
+	color: grey;
 }
 
 .sub_photo{
