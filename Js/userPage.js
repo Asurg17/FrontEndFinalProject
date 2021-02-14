@@ -166,8 +166,39 @@ function addCar(){
  	var newCarColor = document.getElementById("color").value;
  	var newCarSeats = document.getElementById("seats").value;
  	var newCarPrice = document.getElementById("price").value;
- 	var newCarImages = document.getElementById("images").value;
  	var newCarDescription = document.getElementById("description").value;
+
+ 	// pictures
+
+ 	var images = [];
+
+ 	var image1 = document.getElementById("image1").value;
+ 	var image2 = document.getElementById("image2").value;
+	var image3 = document.getElementById("image3").value;
+	var image4 = document.getElementById("image4").value;
+	var image5 = document.getElementById("image5").value;
+
+ 	if(image1 != ""){
+ 		images.push(image1);
+ 	}
+
+ 	if(image2 != ""){
+ 		images.push(image2);
+ 	}
+
+ 	if(image3 != ""){
+ 		images.push(image3);
+ 	}
+
+ 	if(image4 != ""){
+ 		images.push(image4);
+ 	}
+
+ 	if(image5 != ""){
+ 		images.push(image5);
+ 	}
+
+ 	// ---------------------------------------------------------------------------------------------------
 
  	// if some rows are empty
  	if(newCarName == "" || newCarManufacturer == "" || newCarModel == "" || newCarModelYear == "" ||
@@ -193,7 +224,7 @@ function addCar(){
 					  color: newCarColor,
 					  seats: newCarSeats,
 					  price: newCarPrice,
-					  pictures: [],
+					  pictures: images,
 					  car_description: newCarDescription,
 					  location: curUser.location,
 					  busy_from:"",
@@ -201,7 +232,7 @@ function addCar(){
 					  owner_id : curUser.id,
 					  owner_raiting: curUser.raiting};
 
-		// alert(JSON.stringify(newCar));
+		alert(JSON.stringify(newCar));
 
 		var oldData = localStorage.getItem("cars");
 		oldData = oldData.slice(0, -1);

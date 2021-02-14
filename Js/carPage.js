@@ -56,10 +56,11 @@ function displayCarInfo(carId){
 	if(data[carId-1].pictures.length != 0){
 		var firstPicrute = data[carId-1].pictures[0];
 		document.getElementById("car_img").src = firstPicrute;
+		document.getElementById("image_num").innerHTML = "1/" + curCarInfo.pictures.length;
 	}
 
 	document.getElementById("car_name").innerHTML = curCarInfo.car_name;
-	document.getElementById("car_id").innerHTML = "N " + curCarInfo.id;
+	document.getElementById("car_id").innerHTML = "Id: " + curCarInfo.id;
 	document.getElementById("manufacturer").innerHTML = "Manufacturer: " + curCarInfo.manufacturer;
 	document.getElementById("model").innerHTML = "Model: " + curCarInfo.model;
 	document.getElementById("year").innerHTML = "Model Year: " + curCarInfo.model_year;
@@ -105,6 +106,7 @@ function showNextPhoto(){
 	if(photoIndex < curCarInfo.pictures.length-1){	
 		photoIndex += 1;
 		document.getElementById("car_img").src = curCarInfo.pictures[photoIndex];
+		document.getElementById("image_num").innerHTML = (photoIndex+1) + "/" + curCarInfo.pictures.length;
 	}
 
 }
@@ -114,6 +116,7 @@ function showPreviousPhoto(){
 	if(photoIndex != 0){
 		photoIndex -= 1;
 		document.getElementById("car_img").src = curCarInfo.pictures[photoIndex];
+		document.getElementById("image_num").innerHTML = (photoIndex+1) + "/" + curCarInfo.pictures.length;
 	}
 
 }
