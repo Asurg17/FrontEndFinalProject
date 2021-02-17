@@ -234,7 +234,7 @@ function redirectToCarPage(id){
 
 function searchCar(){
 
-	alert("va va! ras edzeb dzma? :)");
+	// alert("va va! ras edzeb dzma? :)");
 
 	getCars("internal");
 
